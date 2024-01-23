@@ -15,7 +15,7 @@ Have you ever seen memes like these online & wanted to make your own? Now you ca
 
 ### Mock Design
 
-<img src="CS-260-Page1v2.png" alt="Mock" width="500"/>
+<img src="CS-260-Page1v2.png" alt="Mock" width="800"/>
 
 
 
