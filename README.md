@@ -7,9 +7,8 @@ Have you ever seen memes like these online & wanted to make your own? Now you ca
 
 >![Side of Beef](https://i.pinimg.com/564x/7d/55/6f/7d556f8abca7eaa2caec121deb1dc347.jpg)
 
->![Boneless Men](https://img.wattpad.com/3ebe6578bfa64c013f8a98b22d3aafb21ccf695f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f7545634c7651324e37724a4658773d3d2d342e313539313832326637316663653037373732313439363439313436312e6a7067?s=fit&w=720&h=720)
 
->![Deep Fried Surreal Memes Subreddit](https://www.reddit.com/r/deepfriedsurrealmemes/)
+>[Deep Fried Surreal Memes Subreddit](https://www.reddit.com/r/deepfriedsurrealmemes/)
 
 
 ### Design
