@@ -8,7 +8,9 @@
 * I did get help from my CS roommate, the internet, & from ChatGPT
 
 
-
+# 1/22/24 -- Startup Assignment
+* I changed my project idea. It was going to be a video editor, but now it's just a deep fried image maker
+* I don't know how to write the code for all the different technologies, but I'll learn at some point
 
 
 
