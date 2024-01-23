@@ -5,7 +5,7 @@
 
 Have you ever seen memes like these online & wanted to make your own? Now you can in your browser! No need to be a photoshop guru or advanced technical knowledge. It's so easy your cat could do it!
 
-![Side of Beef|500](https://i.pinimg.com/564x/7d/55/6f/7d556f8abca7eaa2caec121deb1dc347.jpg)
+![Side of Beef](https://i.pinimg.com/564x/7d/55/6f/7d556f8abca7eaa2caec121deb1dc347.jpg|500)
 
 
 >Even more memes here ➡️ [Deep Fried Surreal Memes Subreddit](https://www.reddit.com/r/deepfriedsurrealmemes/)
