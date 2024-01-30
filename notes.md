@@ -13,11 +13,11 @@
 * I don't know how to write the code for all the different technologies, but I'll learn at some point
 
 
-
-
-
-
-
+# 1/29/24 -- AWS-EC2
+* idk what I did wrong but I followed all the steps to set it up. The server's status is "running" but I can't connect in my browser (I tried both Brave & Microsoft Edge bc those are the only 2 I have. I want to get rid of Edge though). I even rebooted the server, but it's still not working
+* turns out in the instructions it said to make **Inbound & Outbound Rules** but it didn't show a picture of where to click for that, so I assumed it would do it itself. I messaged the discord to ge help & I fixed it. I also thought in the instructions in the **SSH into your server**, that it meant to use the console in the AWS website, but that didn't work so I used it in VSCode & it worked fine.
+* the ip for the website is http://52.90.25.128/
+* command I used in VSCode terminalto SSH into it "ssh -i CS260.pem ubuntu@52.90.25.128"
 
 
 
