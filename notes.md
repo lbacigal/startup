@@ -20,6 +20,8 @@
 * command I used in VSCode terminalto SSH into it "ssh -i CS260.pem ubuntu@54.158.188.159"
 
 
-
-
+# 1/30/24 -- HTTPS, TLS, and certificates
+* This may sound dumb, but I literally just learned that the Github schedule for this class is WAYY better than the Canvas schedule. I completely missed the steps to buy a domain name with the Route53 stuff. But now I know to ALWAYS look at the Github schedule.
+* I learned that when I'm editing the Caddy file, that using "vi Caddyfile" is really hard. Apparently if you use "nano Caddyfile" it's a LOT more user friendly, while still being able to edit the file.
+* When I buy a domain, it's better to use a ".click" rather than a ".com" or ".org" because they are always cheaper
 
