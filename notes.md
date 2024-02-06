@@ -27,4 +27,7 @@
 * I also did "the console" assignment. I'm pretty sure I understood what was going on. I made a txt file called 'test', & put a print thing in it. Then copied that file & made a new file from it called 'other'. put the contents of the 'test' file in the 'other' file, then deleted the 'test' file. then did a function that ran through the 'other' file to get an output. I'm wayy more used to Python, but it made sense coneceptually
 
 
-
+# 4/2/24 -- HTML structure, input, media
+* I think it's really cool how you can basically embed anything you want in HTML. The syntax for adding things tends to be a lot of writing though. It makes sense to do the header thing with <>, but I always forget to do the </> for most of it
+* I tried putting music in it, but I couldn't find any mp3 files online (& I also didn't know what to look for), so I experimented putting a song on Spotify on it. It seemed to work well, but Spotify doesn't let you have song controls (maybe there is but I wasn't able to figure it out)
+* I also realized I turned in th Media assignment, but I forgot to save it before submitting it. I went back & changed the color of the Canvas & SVG though.
