@@ -12,7 +12,7 @@ Have you ever seen memes like these online & wanted to make your own? Now you ca
 >😎 Even more memes like this here ➡️ [Deep Fried Surreal Memes Subreddit](https://www.reddit.com/r/deepfriedsurrealmemes/)
 
 
-[MemeFryer Website](https://memefryer.click/)
+[MemeFryer Website](https://startup.memefryer.click/)
 
 ### Mock Design
 
