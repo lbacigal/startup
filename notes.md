@@ -52,3 +52,9 @@
 * after looking at more examples of CSS at the bottom of the assignment, I am very intimitated now hahaa....
 * 'vh' stand for view height when animating things
 
+# 2/5/24 -- HTML Startup
+* I've realized I can't do a lot of customization because I'm not doing CSS right now.
+* I've also noticed I probably want to add more tabs for the website. One being a profile tab so people can change it if they want
+* I also want to eventually add a dark mode & view editor so people can view it however they want
+* I put a spot for a Sorting thing in the Community tab, similar to reddit
+* I'd like community posts to be able to be shared online, whether it's a link, or a download button, or an embed button, etc
