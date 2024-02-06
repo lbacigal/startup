@@ -38,7 +38,8 @@
 * turns out when you to /* */, anything you type betwwen there is not rendered but is meant to keep notes of things. kinda like # in python, or // in C++
 * this website is gonna be super useful later https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
 * when doing things with @keyframes, the first 0% is where you want it to start. The next 100% is where you want it to end up when it's done with the animation. in the practice, you had to put where you want the 'fly-from-left' to start & end. the CSS doesn't know what you want by default, you have to tell it specifically.
-* Here is the distinction for the padding, border, & margin. I was getting confuse & lost where in the element it is. Here's a few images I use to remember <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/box-model.png" alt="mozilla example" width="300"> <img src="https://github.com/webprogramming260/.github/raw/main/profile/css/introduction/cssBoxModel.jpg" alt="CS260 example" width="300">
+* Here is the distinction for the padding, border, & margin. I was getting confuse & lost where in the element it is. Here's a few images I use to remember 
+<img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/box-model.png" alt="mozilla example" width="300"> <img src="https://github.com/webprogramming260/.github/raw/main/profile/css/introduction/cssBoxModel.jpg" alt="CS260 example" width="300">
 * when typing the 'header, background-color' properties, it applies to the entire container, not the text heading itself
 * typing 'h1 color: hsl( ####)' that applies to the text in the heading, not the entire heading container
 * when making the structures in the HTML, you give it a class if you want to animate it or give it certain properties. Then you give it those properties in the CSS with like '.ugly {***whatever you wanted to put here***}'
