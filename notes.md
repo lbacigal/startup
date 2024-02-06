@@ -58,3 +58,6 @@
 * I also want to eventually add a dark mode & view editor so people can view it however they want
 * I put a spot for a Sorting thing in the Community tab, similar to reddit
 * I'd like community posts to be able to be shared online, whether it's a link, or a download button, or an embed button, etc
+* I ssh'd using "ssh -i ../CS260.pem ubuntu@54.158.188.159" to make sure it went through
+* I also deployed it with "./deployFiles.sh -k ../CS260.pem -h memefryer.click -s startup"
+* I was really confused initally because when I went to 'memefryer.click' it was still showing the CS260 default page. But then I remembered I need to put it as 'startup.memefryer.click' for it to show the new stuff. I'd like to get rid of the CS260 & the Simon stuff later.
