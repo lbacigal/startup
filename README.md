@@ -58,4 +58,4 @@ Have you ever seen memes like these online & wanted to make your own? Now you ca
 - notifications tab when people like/comment on community posts
 
 
-[notes](notes.md)
+[Notes/things I learned along the way](notes.md)
