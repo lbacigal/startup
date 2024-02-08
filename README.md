@@ -9,10 +9,11 @@ Have you ever seen memes like these online & wanted to make your own? Now you ca
 
 
 
->😎 Even more memes like this here ➡️ [Deep Fried Surreal Memes Subreddit](https://www.reddit.com/r/deepfriedsurrealmemes/)
+>😎 Even more memes like this here ➡️ [r/deepfriedsurrealmemes](https://www.reddit.com/r/deepfriedsurrealmemes/)
+>[r/DeepFried](https://www.reddit.com/r/DeepFried/)
 
 
-[MemeFryer Website](https://startup.memefryer.click/)
+[WIP MemeFryer Website](https://startup.memefryer.click/)
 
 ### Mock Design
 
