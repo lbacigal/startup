@@ -51,6 +51,7 @@
 * you can use 'li' to change the style of the bullet points in a list
 * after looking at more examples of CSS at the bottom of the assignment, I am very intimitated now hahaa....
 * 'vh' stand for view height when animating things
+* I'm gonna need this for later https://github.com/public-apis/public-apis
 
 # 2/5/24 -- HTML Startup
 * I've realized I can't do a lot of customization because I'm not doing CSS right now.
@@ -61,7 +62,7 @@
 * I ssh'd using "ssh -i ../CS260.pem ubuntu@54.158.188.159" to make sure it went through
 * I also deployed it with "./deployFiles.sh -k ../CS260.pem -h memefryer.click -s startup"
 * I was really confused initally because when I went to 'memefryer.click' it was still showing the CS260 default page. But then I remembered I need to put it as 'startup.memefryer.click' for it to show the new stuff. I'd like to get rid of the CS260 & the Simon stuff later.
-
+* I'm gonna need this for later https://github.com/public-apis/public-apis
 
 # 2/7/24 -- CSS Flex
 * '1fr' stands for 'fractional unit'
