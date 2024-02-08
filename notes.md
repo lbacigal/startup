@@ -61,3 +61,14 @@
 * I ssh'd using "ssh -i ../CS260.pem ubuntu@54.158.188.159" to make sure it went through
 * I also deployed it with "./deployFiles.sh -k ../CS260.pem -h memefryer.click -s startup"
 * I was really confused initally because when I went to 'memefryer.click' it was still showing the CS260 default page. But then I remembered I need to put it as 'startup.memefryer.click' for it to show the new stuff. I'd like to get rid of the CS260 & the Simon stuff later.
+
+
+# 2/7/24 -- CSS Flex
+* '1fr' stands for 'fractional unit'
+* A fractional unit is dynamically computed by splitting up the parent element's width into equal parts.
+* when doing things with 'flex: # #' the first # means how much of a 'fr' it will grow. if you put 'flex: 0 80px', it means the element won't grow, & will be fixed at 80px height
+* when I specified in the '<body>' I said 'height: 100vh' & it took up the whole height. But when I changed it to 'height: 100%' it only fit to the height of the text. But when I put in the html css 'height: 100%' then the body went back to taking up the whole page. idk why, but that's what happened lol
+* would it be easier to put 'display: flex;' in the * part of css? Since everything used it in the CSS Flex assignment?
+* turns out there is a thing called '-webkit-text-stroke: #px color;'. This basically outlines text, which is cool
+* I've been typing the colors out in words, not the hex or whatever values. I hope theres a tool or something I can use to get colors quickly, because there's no way I'm gonna memorize all the color hex values
+* W3 schools is a life-saver fr
