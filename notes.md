@@ -73,3 +73,11 @@
 * turns out there is a thing called '-webkit-text-stroke: #px color;'. This basically outlines text, which is cool
 * I've been typing the colors out in words, not the hex or whatever values. I hope theres a tool or something I can use to get colors quickly, because there's no way I'm gonna memorize all the color hex values
 * W3 schools is a life-saver fr
+
+# 2/10/24 -- CSS Frameworks
+* There are different ways of including CSS into HTML documents. some write it in the HTML itself, others don't
+* to solve the problem in the Debugging CSS, I used 'justify-contents: center' or something like that. I did it without looking up anything to yeeet
+* "For future reference, to include Bootstrap in your application using NPM you would run the following from your console. npm install bootstrap@5.2.3"
+* This is gonna be my main resource for finding Bootstrap code ➡️ https://codepen.io/leesjensen/pen/JjZavjW?editors=1000
+* I do like that Bootstrap includes all of it in the HTML, but I can already tell I'm going to get lost in the code because it's so much more to write for every element. As I use it more I'm sure it'll get better
+* I like codepen, but if it had a thing to highlight which element you are clicking on that would be great, in the same way VSCode has highlighted brackets
