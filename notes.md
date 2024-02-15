@@ -95,3 +95,5 @@
     * added the fancy bootstrap login thing to the home page
     * created index.css
     * decided to move to my desktop, my 1 screen laptop wasn't cutting it
+    * not gonna lie, I'm using a lot of ChatGPT to help me troubleshoot & design things when idk what to do
+    * I've decided to make a custom image that stretches across the top of the website, similar to a subreddit
