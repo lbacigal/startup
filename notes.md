@@ -89,6 +89,9 @@
 * turns out in CodePen you can look at the console in the bottom left corner of the screen
 * Idk why, but in this little function tester thing, if I have the array with integers in it, it's false. But if it's strings, it's true. https://codepen.io/lbacigal/pen/zYberdR
 
+## Startup CSS, what I did
 * accidentally deployed Simon CSS to my startup.memefryer.click, but I fixed it
 * began working on Startup CSS at 2:55pm, here I'll list what I did
     * added the fancy bootstrap login thing to the home page
+    * created index.css
+    * decided to move to my desktop, my 1 screen laptop wasn't cutting it
