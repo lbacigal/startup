@@ -81,3 +81,11 @@
 * This is gonna be my main resource for finding Bootstrap code ➡️ https://codepen.io/leesjensen/pen/JjZavjW?editors=1000
 * I do like that Bootstrap includes all of it in the HTML, but I can already tell I'm going to get lost in the code because it's so much more to write for every element. As I use it more I'm sure it'll get better
 * I like codepen, but if it had a thing to highlight which element you are clicking on that would be great, in the same way VSCode has highlighted brackets
+
+# 2/15/24 -- Day 15-17 stuff
+* I'm very glad you can do the '===' to not worry about the 'falsy' & 'truthy' values. Those would get mega confusing. Idk why you would want to use the 'falsy' & 'truthy' stuff anyway, I'm sure some big brain person knows how to use them
+* use this site for looking at example JavaScript stuff https://htmlpreview.github.io/?https://github.com/webprogramming260/.github/blob/main/profile/javascript/introduction/jsDemo.html
+* It looks like Arrow Functions in JavaScript work the same way as lambda functions in Python. I'm not used to writing code like that, so that'll be a challenge for me. 
+* turns out in CodePen you can look at the console in the bottom left corner of the screen
+* Idk why, but in this little function tester thing, if I have the array with integers in it, it's false. But if it's strings, it's true. https://codepen.io/lbacigal/pen/zYberdR
+* 
