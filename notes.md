@@ -92,6 +92,7 @@
 ## Startup CSS, what I did
 * accidentally deployed Simon CSS to my startup.memefryer.click, but I fixed it
 * began working on Startup CSS at 2:55pm, here I'll list what I did
+    * decided I wanted bootstrap things in each html page (I think the fonts look better anyway)
     * added the fancy bootstrap login thing to the home page
     * created index.css
     * decided to move to my desktop, my 1 screen laptop wasn't cutting it
