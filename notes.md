@@ -90,4 +90,5 @@
 * Idk why, but in this little function tester thing, if I have the array with integers in it, it's false. But if it's strings, it's true. https://codepen.io/lbacigal/pen/zYberdR
 
 * accidentally deployed Simon CSS to my startup.memefryer.click, but I fixed it
-* began working on Startup CSS at 2:55pm
+* began working on Startup CSS at 2:55pm, here I'll list what I did
+    * added the fancy bootstrap login thing to the home page
