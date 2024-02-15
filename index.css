@@ -26,3 +26,11 @@
   display: block;
   padding: 10px;
 }
+
+/* Add styles for the login form */
+.login-form {
+  max-width: 450px; /* Adjust the maximum width as needed */
+  margin: 0 auto;  /* Center the form horizontally */
+  border: 0.5px solid black; /* Add a black border */
+  padding: 10px; /* Add some padding for spacing */
+}
