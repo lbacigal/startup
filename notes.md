@@ -88,4 +88,6 @@
 * It looks like Arrow Functions in JavaScript work the same way as lambda functions in Python. I'm not used to writing code like that, so that'll be a challenge for me. 
 * turns out in CodePen you can look at the console in the bottom left corner of the screen
 * Idk why, but in this little function tester thing, if I have the array with integers in it, it's false. But if it's strings, it's true. https://codepen.io/lbacigal/pen/zYberdR
-* 
+
+* accidentally deployed Simon CSS to my startup.memefryer.click, but I fixed it
+* began working on Startup CSS at 2:55pm
