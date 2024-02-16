@@ -101,3 +101,4 @@
     * adjusted the login size thingy
     * made a profile.html & added a profile button to the navigator bar thing
     * tried to put profile button on right side of screen, but I got lost & confused so I just have it sit in the nav bar. it looks better like that anyway
+    * stopped working on this to go on a date at 5pm
