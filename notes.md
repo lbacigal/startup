@@ -89,7 +89,7 @@
 * turns out in CodePen you can look at the console in the bottom left corner of the screen
 * Idk why, but in this little function tester thing, if I have the array with integers in it, it's false. But if it's strings, it's true. https://codepen.io/lbacigal/pen/zYberdR
 
-## Startup CSS, what I did
+## Startup CSS, what I did/thoughts/whatever came to mind
 * accidentally deployed Simon CSS to my startup.memefryer.click, but I fixed it
 * began working on Startup CSS at 2:55pm, here I'll list what I did
     * decided I wanted bootstrap things in each html page (I think the fonts look better anyway)
@@ -127,4 +127,5 @@
     * I found this & I like how it looks so I'm gonna use it & change it for the community tab https://codepen.io/ramenhog/pen/MpORPa
     * I decided to make the footer static on every page
     * Community Tab is basically set up how I'd want it to look. I'm not sure how do embed public apis tho. Or how these images would come from people making them.
-    
+    * I redid the whole layout for the editor page, whatever I was doing before wasn't working. I make a flex-container with one side being the image, the other with all the controls. 
+

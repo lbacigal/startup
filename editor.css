@@ -42,20 +42,54 @@ h1 {
   text-align: center;
 }
 
-/* .fix-later {
-  height: 100vh;
-} */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
 
-.image-sandbox {
-    display: flex;
-    position: absolute;
-    top: 250px;
-    right: 300px;
-
-    
-    @media screen and (max-width: 768px) {
-        /* Adjust position for screens up to 768px wide */
-        top: 50px;
-        left: 100px;
-    }
 }
+
+form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100;
+  height:260px;
+  margin:0 auto;
+
+
+}
+
+
+label {
+  grid-column: 1; /* Labels in the first column */
+  
+}
+
+input {
+  grid-column: 2; /* Inputs in the second column */
+  width: 100%; /* Make the inputs fill the available width */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Brightness
+Contrast
+Saturation
+Sharpness */
+/* Hue */
+/* Temperature */
+/* Exposure */
+/* Gamma Correction */
+/* Vibrance */
+/* Noise Reduction */
+/* Blur */
+/* Sepia Tone
+Shadow and Highlight Adjustment
+Crop
+/* Rotate */
+/* Flip
+Opacity
+Color Balance
+Grayscale Conversion */ 
+/* Invert Colors */

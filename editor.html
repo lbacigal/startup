@@ -16,7 +16,6 @@
   </head>
   <br>
   
-  
     <header>
       <h1>MemeFryer</h1>
       <br>
@@ -24,80 +23,73 @@
       <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="editor.html">Editor</a></li>
-        <li><a href="community.html">Community Makes</a></li>
+        <li><a href="community.html">Community</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="profile.html">Profile</a></li>
       </ul>
     </header>
 
 
-    <body class="fix-later">
-      <main>
-        <h1>Editor</h1>
-          <p style="text-align: center;">This is still a placeholder, nothing works yet</main>
-          <img class='image-sandbox' src="CS-260-Page1v2.png" width="900" style="align-content: center;">
-      </main>
-    
-    
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 offset-md-1">
+<div class="flex-container">
 
-              <div class="col s12 m12 brightness">
-                      <p>Brightness <span class="span">0</span></p>
-                      <form>
-                          <p class="range-field">
-                              <input type="range" id="brightness" min="-50" max="50" />
-                          </p>
-                      </form>
-                  </div>
-              <div class="col s12 m12 ">
-                  <p>Noise <span class="span">0</span></p>
-                  <form>
-                      <p class="range-field ">
-                          <input type="range" id="noise" min="0" max="100" value="0"/> 
-                      </p>
-                  </form>
-              </div>
-              <div class="col s12 m12 sepia">
-                  <p>Sepia <span class="span">0</span></p>
-                  <form>
-                      <p class="range-field">
-                          <input type="range" id="sepia" min="0" max="100" value="0"/>
-                      </p>
-                  </form>
-              </div>
-      
-              <div class="col s12 m12 saturation">
-                <p>Saturation <span class="span">0</span></p>
-                <form>
-                    <p class="range-field ">
-                        <input type="range" class="" id="saturation" min="-100" max="100" />
-                    </p>
-                </form>
-            </div>
-            <div class="col s12 m12 vibrance">
-                <p>Vibrance <span class="span">0</span></p>
-                <form>
-                    <p class="range-field">
-                        <input type="range" id="vibrance" min="-100" max="100" />
-                    </p>
-                </form>
-            </div>
-            <div class="col s12 m12 hue">
-                <p>Hue <span class="span">0</span></p>
-                <form>
-                    <p class="range-field">
-                        <input type="range" id="hue" min="0" max="100" value="0" />
-                    </p>
-                </form>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div>    
+    <form>
+      <label for="bri">Brightness</label>
+      <input type="range" value="21" id="bri"/>
 
-    </body>
+      <label for="con">Contrast</label>
+      <input type="range" value="21" id="con"/>
+
+      <label for="sat">Saturation</label>
+      <input type="range" value="21" id="sat"/>
+
+      <label for="sha">Sharpness</label>
+      <input type="range" value="21" id="sha"/>
+
+      <label for="hue">Hue</label>
+      <input type="range" value="21" id="hue"/>
+
+      <label for="tem">Temerature</label>
+      <input type="range" value="21" id="tem"/>
+
+      <label for="exp">Exposure</label>
+      <input type="range" value="21" id="exp"/>
+
+      <label for="gam">Gamma Correction</label>
+      <input type="range" value="21" id="gam"/>
+
+      <label for="vib">Vibrance</label>
+      <input type="range" value="21" id="vib"/>
+
+      <label for="noi">Noise</label>
+      <input type="range" value="21" id="noi"/>
+
+      <label for="blu">Blur</label>
+      <input type="range" value="21" id="blu"/>
+
+      <label for="inv">Invert Colors</label>
+      <input type="range" value="21" id="inv"/>
+
+      <label for="rot">Image Rotation</label>
+      <input type="range" value="21" id="rot"/>
+
+      <label for="t-txt">Top Text</label>
+      <input type="text" id="t-txt"/>
+
+      <label for="b-txt">Bottom Text</label>
+      <input type="text" id="b-txt"/>
+
+      <input type="button" value="Undo">
+      <input type="button" value="Redo">
+      <input type="button" onclick="alert('pretend this works 🥶')" value="Download"/>
+      <input type="reset" value="Reset">
+    </form>
+  </div>
+
+  <div> <img src="CS-260-Page1v2.png" width="500" style="border: solid black thin"></div>
+
+</div>
 
 
 
@@ -108,7 +100,7 @@
       <p>Started on 1/11/24</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   </html>
-
 
 
