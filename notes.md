@@ -125,4 +125,6 @@
     * this also looks sick, maybe use this in the future? https://codepen.io/Gogh/pen/gOqVqBx
     * in the loooooong future, what if I make the sliders look like this? https://codepen.io/alvaromontoro/pen/BabJQqx
     * I found this & I like how it looks so I'm gonna use it & change it for the community tab https://codepen.io/ramenhog/pen/MpORPa
-    * 
+    * I decided to make the footer static on every page
+    * Community Tab is basically set up how I'd want it to look. I'm not sure how do embed public apis tho. Or how these images would come from people making them.
+    
