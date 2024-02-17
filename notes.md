@@ -104,4 +104,6 @@
     * stopped working on this to go on a date at 5pm
     * resumed working on this on 2/16/24 at 6pm
     * made the footer always appear at the bottom
-    
+    * turns out opacity is an attribute you can put in the HTML itself. pretty epic. "<hr style="opacity:0" />"
+    * added transparent horizontal rule
+    * 
