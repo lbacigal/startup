@@ -106,4 +106,7 @@
     * made the footer always appear at the bottom
     * turns out opacity is an attribute you can put in the HTML itself. pretty epic. "<hr style="opacity:0" />"
     * added transparent horizontal rule
+    * I'm now realizing it's good to do the styling within the HTML if it's not going to change a lot or if I don't want to make a class to make CSS code for that specific thing.
+    * Aligned the welcome message on the home page
+    * I want to add this type of design to the login thing, but I'll do that later bc I just need to get all of the pages formatted. https://codepen.io/lbacigal/pen/wvONRXa?editors=1100
     * 
