@@ -8,8 +8,16 @@ footer {
 }
 
 
-.list.center-align.cont-bri .col.s12.m12 {
-    position: relative;
-    top: -30px; /* Adjust this value as needed */
-  }
+.image-sandbox {
 
+    position: absolute;
+    top: 100px;
+    right: 1000px;
+
+    
+    @media screen and (max-width: 768px) {
+        /* Adjust position for screens up to 768px wide */
+        top: 50px;
+        left: 100px;
+    }
+}
