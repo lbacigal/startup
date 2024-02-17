@@ -28,6 +28,7 @@
     padding: 10px;
   }
 
+
 footer {
     position: fixed;
     left: 0;
@@ -37,11 +38,18 @@ footer {
     line-height: 1px;
 }
 
+h1 {
+  text-align: center;
+}
+
+/* .fix-later {
+  height: 100vh;
+} */
 
 .image-sandbox {
     display: flex;
     position: absolute;
-    top: 200px;
+    top: 250px;
     right: 300px;
 
     

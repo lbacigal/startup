@@ -35,6 +35,19 @@
     padding: 10px; /* Add some padding for spacing */
   }
 
+  h1 {
+    text-align: center;
+  }
+
+  footer {
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 1px;
+}
+
   .fix-later {
     display: flex;
     justify-content: center;

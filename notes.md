@@ -113,3 +113,8 @@
     * working on adding sliders to the editor tab. I got them in a vertical list, but I'm having a hard time putting it next to the sample image
     * I decided to try putting absolute positions for the sliders & image, hopefully it works lol
     * I realized it was working the whole time, but I was referencing a different css file the... rookie mistake
+    * I think this is super cool, hopefully I can find a way to include it https://codepen.io/lbacigal/pen/ZEPwwWo
+    * I kinda wanna use the sidebars too, idk how tho https://getbootstrap.com/docs/5.3/examples/sidebars/
+    * I realized the footer is always stuck on the screen, but I want it to appear only if you scroll down to look for it. Troubleshooting that
+        * I was only able to get it to cooperate on the index & profile. idk how to get it to work in the editor bc it's a bit weird with the image in it
+    * created css file for the about & community

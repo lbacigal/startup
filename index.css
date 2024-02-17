@@ -27,6 +27,10 @@
   padding: 10px;
 }
 
+h1 {
+  text-align: center;
+}
+
 /* Add styles for the login form */
 .login-form {
   max-width: 450px; /* Adjust the maximum width as needed */
@@ -37,8 +41,13 @@
 }
 
 
+.cool-container {
+  height: 100vh;
+}
+
 footer {
-  position: fixed;
+  position:static;
+  top: 100;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -46,6 +55,3 @@ footer {
   line-height: 1px;
 }
 
-h1 {
-  text-align: center;
-}
