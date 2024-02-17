@@ -2,29 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meme Fryer Editor</title>
+    <title>Editor</title>
     <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="community.css" />
+
+    <!-- Include bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"/>
   </head>
-  <body>
-    <!-- Use header, main, and footer elements to give semantic structure -->
+  <br>
+  
+  
     <header>
-      <h1>Meme Fryer</h1>
-
-      <!-- Navigation elements -->
-      <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="editor.html">Editor</a></li>
-          <li><a href="community.html">Community Makes</a></li>
-          <li><a href="about.html">About</a></li>
-        </menu>
-      </nav>
-
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
-      <hr />
+      <h1>MemeFryer</h1>
+      <br>
+      <!-- Use a <ul> element for the navigation -->
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="editor.html">Editor</a></li>
+        <li><a href="community.html">Community Makes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
     </header>
 
     <main>
@@ -35,24 +38,96 @@
 
         <p>Sort By: Top, Hot, New, Old, Custom, Etc</p>
 
-        <table>
-            <tr>
-                <th>user</th>
-            </tr>
-            <tr>
-                <th>image they made</th>
-            </tr>
-        </table>
+        <div class="section">
+          <div class="grid">
+            <div class="item">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item item--large">
+              <div class="item__details">
+                Example post 
+              </div>
+            </div>
+            <div class="item item--medium">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item item--large">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item item--full">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item item--medium">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item item--large">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item item--medium">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item item--large">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item item--medium">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item item--medium">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item item--large">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__details">
+                Example post
+              </div>
+            </div>
+          </div>
+        </div>
+
         <p>pretend there is a reddit, instagram, twitter, etc cross post button (public APIs)</p>
         
     </main>
 
     <footer>
-        <hr />
-        <span class="text-reset">Luke Bacigalupi</span>
-        <br />
-        <a href="https://github.com/lbacigal/startup.git">GitHub</a>
-        <p>Project started on 1/11/24</p>
-      </footer>
+      <hr />
+      <p>Luke Bacigalupi<p>
+      <p><a href="https://github.com/lbacigal/startup.git">GitHub</a></p>
+      <p>Started on 1/11/24</p>
+    </footer>
+
     </body>
   </html>

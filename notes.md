@@ -118,3 +118,11 @@
     * I realized the footer is always stuck on the screen, but I want it to appear only if you scroll down to look for it. Troubleshooting that
         * I was only able to get it to cooperate on the index & profile. idk how to get it to work in the editor bc it's a bit weird with the image in it
     * created css file for the about & community
+    * here's a bunch of icons I can use in the future if I want 
+        * https://codepen.io/elishaterada/pen/yLvxWa
+        * https://codepen.io/larsenwork/pen/admEZM
+    * this doesn't have anything to do with the project, but it looks cool https://codepen.io/ksenia-k/pen/rNoBgbV
+    * this also looks sick, maybe use this in the future? https://codepen.io/Gogh/pen/gOqVqBx
+    * in the loooooong future, what if I make the sliders look like this? https://codepen.io/alvaromontoro/pen/BabJQqx
+    * I found this & I like how it looks so I'm gonna use it & change it for the community tab https://codepen.io/ramenhog/pen/MpORPa
+    * 
