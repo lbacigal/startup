@@ -110,4 +110,5 @@
     * Aligned the welcome message on the home page
     * I want to add this type of design to the login thing, but I'll do that later bc I just need to get all of the pages formatted. https://codepen.io/lbacigal/pen/wvONRXa?editors=1100
     * put the same formatting in the editor.html & created editor.css
-    
+    * working on adding sliders to the editor tab. I got them in a vertical list, but I'm having a hard time putting it next to the sample image
+    * 

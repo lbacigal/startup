@@ -1,0 +1,15 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 1px;
+}
+
+
+.list.center-align.cont-bri .col.s12.m12 {
+    position: relative;
+    top: -30px; /* Adjust this value as needed */
+  }
+

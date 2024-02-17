@@ -14,8 +14,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"/>
   </head>
-
-  <body>      
+     
     <header>
     <h1>MemeFryer</h1>
     <br>
@@ -28,30 +27,83 @@
       <li><a href="profile.html">Profile</a></li>
     </ul>
   </header>
-</body>
 
     <main>
       <h1>Editor</h1>
 
-        <p>Here is a placeholder for the online editor</p>
-        <img src="CS-260-Page1v2.png" width="500">
+        <p style="text-align: center;">Here is a placeholder for the online editor</p>
+        <center><img class='image-sandbox' src="CS-260-Page1v2.png" width="800" style="align-content: center;"></center>
     </main>
     
-    <main>
-        <li>public apis for editing images (maybe)</li>
-        <li>pretend there are buttons here</li>
-        <li>pretend there are buttons here</li>
-        <li>pretend there are buttons here</li>
-        <li>pretend there are buttons here</li>
-        <li>pretend there are buttons here</li>
-    </main>
+    <body>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 offset-md-1">
+
+            <div class="list center-align cont-bri">
+              <div class="col s12 m12 brightness">
+                      <p>Brightness <span class="span">0</span></p>
+                      <form>
+                          <p class="range-field">
+                              <input type="range" id="brightness" min="-50" max="50" />
+                          </p>
+                      </form>
+                  </div>
+              <div class="col s12 m12 ">
+                  <p>Noise <span class="span">0</span></p>
+                  <form>
+                      <p class="range-field ">
+                          <input type="range" id="noise" min="0" max="100" value="0"/> 
+                      </p>
+                  </form>
+              </div>
+              <div class="col s12 m12 sepia">
+                  <p>Sepia <span class="span">0</span></p>
+                  <form>
+                      <p class="range-field">
+                          <input type="range" id="sepia" min="0" max="100" value="0"/>
+                      </p>
+                  </form>
+              </div>
+      
+              <div class="col s12 m12 saturation">
+                <p>Saturation <span class="span">0</span></p>
+                <form>
+                    <p class="range-field ">
+                        <input type="range" class="" id="saturation" min="-100" max="100" />
+                    </p>
+                </form>
+            </div>
+            <div class="col s12 m12 vibrance">
+                <p>Vibrance <span class="span">0</span></p>
+                <form>
+                    <p class="range-field">
+                        <input type="range" id="vibrance" min="-100" max="100" />
+                    </p>
+                </form>
+            </div>
+            <div class="col s12 m12 hue">
+                <p>Hue <span class="span">0</span></p>
+                <form>
+                    <p class="range-field">
+                        <input type="range" id="hue" min="0" max="100" value="0" />
+                    </p>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </body>
+
+
 
     <footer>
-        <hr />
-        <span class="text-reset">Luke Bacigalupi</span>
-        <br />
-        <a href="https://github.com/lbacigal/startup.git">GitHub</a>
-        <p>Project started on 1/11/24</p>
-      </footer>
-    </body>
+      <hr />
+      <p>Luke Bacigalupi<p>
+      <p><a href="https://github.com/lbacigal/startup.git">GitHub</a></p>
+      <p>Started on 1/11/24</p>
+    </footer>
+
   </html>
