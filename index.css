@@ -32,5 +32,16 @@
   max-width: 450px; /* Adjust the maximum width as needed */
   margin: 0 auto;  /* Center the form horizontally */
   border: 0.5px solid black; /* Add a black border */
+  border-radius: 10px;
   padding: 10px; /* Add some padding for spacing */
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 1px;
 }
