@@ -112,3 +112,4 @@
     * put the same formatting in the editor.html & created editor.css
     * working on adding sliders to the editor tab. I got them in a vertical list, but I'm having a hard time putting it next to the sample image
     * I decided to try putting absolute positions for the sliders & image, hopefully it works lol
+    * I realized it was working the whole time, but I was referencing a different css file the... rookie mistake
