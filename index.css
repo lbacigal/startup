@@ -1,12 +1,23 @@
-/* Apply styles to the <ul> and <li> elements */
-.menu {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  border-top: black solid thin;
-  border-bottom: black solid thin;
+*{
+  color: #e7b203;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #3d3d3d !important;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    border-top: black solid clear;
+    border-bottom: black solid clear;
+    box-shadow: 0 0 5px #ffbb00;
+  }
 
 .menu li {
   margin: 0 10px;
@@ -14,12 +25,12 @@
 
 .menu a {
   text-decoration: none;
-  color: black;
+  color: #e7b203;
 }
 
 /* Additional styling for better visibility */
 .menu li:hover {
-  background-color: #f0f0f0;
+  background-color: #c7980075;
 }
 
 .menu li a {
@@ -35,9 +46,11 @@ h1 {
 .login-form {
   max-width: 450px; /* Adjust the maximum width as needed */
   margin: 0 auto;  /* Center the form horizontally */
-  border: 0.5px solid black; /* Add a black border */
+  /* border: 0.5px solid #e7b203; Add a black border */
+  box-shadow: 0 0 5px #ffbb00;
   border-radius: 10px;
   padding: 10px; /* Add some padding for spacing */
+  background-color: #3d3d3d;
 }
 
 
@@ -53,5 +66,6 @@ footer {
   width: 100%;
   text-align: center;
   line-height: 1px;
+  /* box-shadow: 0 0 5px #ffbb00; */
 }
 

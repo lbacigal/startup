@@ -1,3 +1,13 @@
+*{
+  color: #e7b203;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #3d3d3d !important;
+}
 
 /* Apply styles to the <ul> and <li> elements */
 .menu {
@@ -5,8 +15,9 @@
     justify-content: center;
     list-style: none;
     padding: 0;
-    border-top: black solid thin;
-    border-bottom: black solid thin;
+    border-top: black solid clear;
+    border-bottom: black solid clear;
+    box-shadow: 0 0 5px #ffbb00;
   }
   
   .menu li {
@@ -15,12 +26,12 @@
   
   .menu a {
     text-decoration: none;
-    color: black;
+    color: #e7b203;
   }
   
   /* Additional styling for better visibility */
   .menu li:hover {
-    background-color: #f0f0f0;
+    background-color: #c7980075;
   }
   
   .menu li a {
@@ -47,6 +58,7 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 10%;
 
 }

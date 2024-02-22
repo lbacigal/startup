@@ -1,4 +1,6 @@
-
+*{
+  color: #e7b203;
+}
 
 body {
   margin: 0;
@@ -38,7 +40,6 @@ body {
 
   h1 {
     text-align: center;
-    color: #e7b203;
   }
 
   footer {
@@ -48,6 +49,7 @@ body {
     width: 100%;
     text-align: center;
     line-height: 1px;
+    /* box-shadow: 0 0 5px #ffbb00; */
 }
 
   .fix-later {

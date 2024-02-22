@@ -129,4 +129,4 @@
     * Community Tab is basically set up how I'd want it to look. I'm not sure how do embed public apis tho. Or how these images would come from people making them.
     * I redid the whole layout for the editor page, whatever I was doing before wasn't working. I make a flex-container with one side being the image, the other with all the controls. 
     * I worked on changing the background color, text color, & glowing menu border
-    
+    * worked on applying the CSS to the rest of the tabs. I have no idea why the community creations tab isn't working. I'm pretty sure it has to do with the image grid I foud from codepen
