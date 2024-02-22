@@ -134,5 +134,7 @@
     * Idk why, but when I changed the 'index.html' to 'home.html' I got this error after I deployed it. "Error: ENOENT: no such file or directory, stat '/home/ubuntu/services/startup/public/index.html' ". So I changed it back to 'index.html'
     * I submitted it. I want to change the icon the website tab has. but idk how to do that yet
 
+# 2/22/24
+* I got this on my startup assignment "Looks good, but can't be graded until you complete all the Prerequisites of the assignment". I'm pretty sure it's because you can't see my Github link on the first page. I had the view height set high enough so you had to scroll down. Idk if that was the actual prerequisite I didn't meet, but we'll see.
 
 
