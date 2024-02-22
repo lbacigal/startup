@@ -130,3 +130,7 @@
     * I redid the whole layout for the editor page, whatever I was doing before wasn't working. I make a flex-container with one side being the image, the other with all the controls. 
     * I worked on changing the background color, text color, & glowing menu border
     * worked on applying the CSS to the rest of the tabs. I have no idea why the community creations tab isn't working. I'm pretty sure it has to do with the image grid I foud from codepen
+    * I added the current tab highlight, that way people know which tab they are on. I got the font stuff fixed on the community tab. The only thing idk how to fix is the footer on the community tab.
+
+
+
