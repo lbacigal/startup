@@ -2,7 +2,7 @@
 
 *{
   color: #e7b203;
-  background-color: #ffffff00 !important;
+  /* background-color: #ffffff00 !important; */
 }
 
 body {
@@ -79,6 +79,7 @@ html {
 .section {
     display: none;
     padding: 2rem;
+    /* background-color: #ffffff00 */
     background-color: #3d3d3d !important;
     /* color: red !important; */
     
@@ -100,7 +101,7 @@ html {
   }
 
 .item__details{
-  background-color: #ffffff;
+  background-color: #ffffff00;
   /* outline-width: 0px 0p black; */
   color: #ff0000;
   }
