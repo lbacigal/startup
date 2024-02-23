@@ -104,7 +104,7 @@
     * stopped working on this to go on a date at 5pm
     * resumed working on this on 2/16/24 at 6pm
     * made the footer always appear at the bottom
-    * turns out opacity is an attribute you can put in the HTML itself. pretty epic. "<hr style="opacity:0" />"
+    * turns out opacity is an attribute you can put in the HTML itself. pretty epic. '''html <hr style="opacity:0" />'''
     * added transparent horizontal rule
     * I'm now realizing it's good to do the styling within the HTML if it's not going to change a lot or if I don't want to make a class to make CSS code for that specific thing.
     * Aligned the welcome message on the home page
@@ -137,4 +137,8 @@
 # 2/22/24
 * I got this on my startup assignment "Looks good, but can't be graded until you complete all the Prerequisites of the assignment". I'm pretty sure it's because you can't see my Github link on the first page. I had the view height set high enough so you had to scroll down. Idk if that was the actual prerequisite I didn't meet, but we'll see.
 
+### Startup CSS Prerequisites
+* Simon CSS was deployed to my VSCode in a separate folder when I started working on the Startup CSS
+* Here is the TLDR of what I modified and added with this deliverable
+    * 
 
