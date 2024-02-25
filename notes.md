@@ -140,5 +140,10 @@
 ### Startup CSS Prerequisites
 * Simon CSS was deployed to my VSCode in a separate folder when I started working on the Startup CSS
 * Here is the TLDR of what I modified and added with this deliverable
-    * 
+    * changed color scheme to grey with an orange glow
+    * added more HTML & CSS tabs for each page. Now there are 5 pages total: Home, Editor, Community, About, Profile
+    * added sliders on the editor tab to control image effects
+    * added buttons in the editor tab
+    * added example memes in the community tab
+
 
