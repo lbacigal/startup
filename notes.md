@@ -24,7 +24,7 @@
 * This may sound dumb, but I literally just learned that the Github schedule for this class is WAYY better than the Canvas schedule. I completely missed the steps to buy a domain name with the Route53 stuff. But now I know to ALWAYS look at the Github schedule.
 * I learned that when I'm editing the Caddy file, that using "vi Caddyfile" is really hard. Apparently if you use "nano Caddyfile" it's a LOT more user friendly, while still being able to edit the file.
 * When I buy a domain, it's better to use a ".click" rather than a ".com" or ".org" because they are always cheaper
-* I also did "the console" assignment. I'm pretty sure I understood what was going on. I made a txt file called 'test', & put a print thing in it. Then copied that file & made a new file from it called 'other'. put the contents of the 'test' file in the 'other' file, then deleted the 'test' file. then did a function that ran through the 'other' file to get an output. I'm wayy more used to Python, but it made sense coneceptually
+* I also did "the console" assignment. I'm pretty sure I understood what was going on. I made a txt file called 'test', & put a print thing in it. Then copied that file & made a new file from it called 'other'. put the contents of the 'test' file in the 'other' file, then deleted the 'test' file. then did a function that ran through the 'other' file to get an output. I'm wayy more used to Python, but it made sense conceptually
 
 
 # 2/3/24 -- HTML structure, input, media
@@ -35,7 +35,7 @@
 
 
 # 2/5/24 -- CSS Practice
-* turns out when you to /* */, anything you type betwwen there is not rendered but is meant to keep notes of things. kinda like # in python, or // in C++
+* turns out when you to /* */, anything you type between there is not rendered but is meant to keep notes of things. kinda like # in python, or // in C++
 * this website is gonna be super useful later https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
 * when doing things with @keyframes, the first 0% is where you want it to start. The next 100% is where you want it to end up when it's done with the animation. in the practice, you had to put where you want the 'fly-from-left' to start & end. the CSS doesn't know what you want by default, you have to tell it specifically.
 * Here is the distinction for the padding, border, & margin. I was getting confuse & lost where in the element it is. Here's a few images I use to remember 
@@ -46,10 +46,10 @@
 * typing 'h1 color: hsl( ####)' that applies to the text in the heading, not the entire heading container
 * when making the structures in the HTML, you give it a class if you want to animate it or give it certain properties. Then you give it those properties in the CSS with like '.ugly {***whatever you wanted to put here***}'
 * I'm unsure why for coloring the html containers you use stuff like **#777 or #111**. But in the header text itself you use **'hsl(##, #%, #%)'**. But in the 'table-data' you use **'#eee'**. idk what the difference is (if it's listed in the instructions, I totally missed it). I'll find out what it is at some point.
-* turns out when things have '1em' or '1.5em', it means 'times the size of the original element', so '1.5em' means '1.5 times the size of the element'. (I'm pretty sure that's what it means, I'm not 100% ceratin though)
+* turns out when things have '1em' or '1.5em', it means 'times the size of the original element', so '1.5em' means '1.5 times the size of the element'. (I'm pretty sure that's what it means, I'm not 100% certain though)
 * when formatting data in a table, you do stuff with 'td', & 'th'. if you want to include the same formatting for both without typing it twice, just do 'th, td {***insert stuff here***}'
 * you can use 'li' to change the style of the bullet points in a list
-* after looking at more examples of CSS at the bottom of the assignment, I am very intimitated now hahaa....
+* after looking at more examples of CSS at the bottom of the assignment, I am very intimidated now hahaa....
 * 'vh' stand for view height when animating things
 * I'm gonna need this for later https://github.com/public-apis/public-apis
 
@@ -61,7 +61,7 @@
 * I'd like community posts to be able to be shared online, whether it's a link, or a download button, or an embed button, etc
 * I ssh'd using "ssh -i ../CS260.pem ubuntu@54.158.188.159" to make sure it went through
 * I also deployed it with "./deployFiles.sh -k ../CS260.pem -h memefryer.click -s startup"
-* I was really confused initally because when I went to 'memefryer.click' it was still showing the CS260 default page. But then I remembered I need to put it as 'startup.memefryer.click' for it to show the new stuff. I'd like to get rid of the CS260 & the Simon stuff later.
+* I was really confused initially because when I went to 'memefryer.click' it was still showing the CS260 default page. But then I remembered I need to put it as 'startup.memefryer.click' for it to show the new stuff. I'd like to get rid of the CS260 & the Simon stuff later.
 * I'm gonna need this for later https://github.com/public-apis/public-apis
 
 # 2/7/24 -- CSS Flex
@@ -129,7 +129,7 @@
     * Community Tab is basically set up how I'd want it to look. I'm not sure how do embed public apis tho. Or how these images would come from people making them.
     * I redid the whole layout for the editor page, whatever I was doing before wasn't working. I make a flex-container with one side being the image, the other with all the controls. 
     * I worked on changing the background color, text color, & glowing menu border
-    * worked on applying the CSS to the rest of the tabs. I have no idea why the community creations tab isn't working. I'm pretty sure it has to do with the image grid I foud from codepen
+    * worked on applying the CSS to the rest of the tabs. I have no idea why the community creations tab isn't working. I'm pretty sure it has to do with the image grid I found from codepen
     * I added the current tab highlight, that way people know which tab they are on. I got the font stuff fixed on the community tab. The only thing idk how to fix is the footer on the community tab.
     * Idk why, but when I changed the 'index.html' to 'home.html' I got this error after I deployed it. "Error: ENOENT: no such file or directory, stat '/home/ubuntu/services/startup/public/index.html' ". So I changed it back to 'index.html'
     * I submitted it. I want to change the icon the website tab has. but idk how to do that yet
@@ -146,4 +146,12 @@
     * added buttons in the editor tab
     * added example memes in the community tab
 
-
+# 2/26/24 - Ideas I had to add in the future
+* I want to add a dark/light mode setting. for now it's dark mode by default
+* I want to add a 'forgot password' button to the login box
+* eventually I will add a background image as the title theme (basically look like a subreddit banner) 
+* add future like/comment buttons to community tab images
+* What if I did a thing where it links to their reddit account, & whenever they post something on Memefryer, it auto-posts to the Memefryer subreddit? (assuming I make a subreddit)
+* add presets to the editor in case people don't want to tinker with it
+* I discovered that this is where I can find all emojis https://emojipedia.org/
+* put a spellchecker extension in VSCode & fixed all my misspellings lol

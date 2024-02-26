@@ -59,5 +59,21 @@ Have you ever seen memes like these online & wanted to make your own? Now you ca
 - messages between users
 - notifications tab when people like/comment on community posts
 
+# HTML Deliverable
+Here is the general HTML structure for Memefryer
+- **5 HTML Pages** - Home (called index in the files), Editor, Community, About, & Profile
+- **Links** - every page has a navigation bar at the top that links to all 5 tabs
+- **Text** - each page has text under the navigation bar explaining what to do or what each page will do. Some are placeholders for future sorting buttons or cross-posting buttons
+- **Images** - example images in both the About & Community tab. Community tab images are currently examples, & will be removed later
+- **DB/Login** - email address & password login box. There is a remember me button, to speed up logging in. Will add a "forgot password" option later. Logging in lets users post their memes in the community tab. (might change this later)
+- **Bootstrap** - included in each HTML file, but used only a little bit. Still learning how to use this
+
+# CSS Deliverable
+Here is the general CSS style for Memefryer
+- **Header, footer, and main content body** - All tabs have an orange/grey theme. Background is always grey, text/elements are orange.
+- **Navigation elements** - Navigation bar has an orange glow outline. Color changes hovering over each option. Current page is displayed in navigation bar in a darker orange
+- **Responsive to window resizing** - My app works on all window sizes and devices
+- **Application text content** - Consistent sans-serif font on all pages. All text is orange to ensure readability with grey background theme.
+- **Application images** - community tab images/text float a little bit when hovered over.
 
 [Notes/things I learned along the way](notes.md)
