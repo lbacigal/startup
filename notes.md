@@ -337,13 +337,24 @@ f();
 // OUTPUT: object
 ```
 
-# Midterm Review
+# Midterm Review Questions
 * Which of the following is NOT a valid way to include JS in HTML?
   1. <script>1+1</script>
-  1. <script src='main.js' />
-  1. <div onclick='1+1' />
-  **1. <javascript>1+1</javascript>**
+  2. <script src='main.js' />
+  3. <div onclick='1+1' />
+  4. <javascript>1+1</javascript> ⬅️
 
 * You can use this CSS to load fonts from Google: @import url('https://fonts.googleapis.com/css?family=Quicksand');
-  **1. True**
-  1. False
+  1. True ⬅️
+  2. False
+
+* Executing the following will output:
+```js
+const f = y => ++y;
+console.log(f(3));
+```
+  1. 4 ⬅️
+  2. 3
+  3. undefined
+  4. 2
+
