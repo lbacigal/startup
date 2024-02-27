@@ -463,7 +463,7 @@ f();
 * What will the following output?
   ```js
   const a = async function() {
-    return new Promsie((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       setTimeout(() => {console.log('D'); resolve(true)}, 10000);
     })
   }
@@ -502,7 +502,7 @@ f();
   ```
 
   * Adds p.mouseover to console.log event
-  * Adds a mouseover event listener to a p element ⬅️ *beacuse it was querySelector, it finds the first one. if it was allSelector then it would be all p elements*
+  * Adds a mouseover event listener to a p element ⬅️ *because it was querySelector, it finds the first one. if it was allSelector then it would be all p elements*
   * Adds a mouseover event listener to console.log events on a p element
   * Adds a mouseover event listener to all p elements
 
@@ -510,7 +510,7 @@ f();
 * In HTML, what does ```<div>``` do?
   * Creates a division element ⬅️
   * creates a dividend element
-  * creater a divider element
+  * creates a divider element
   * creates a divinity element
 
 ---
@@ -598,5 +598,204 @@ f();
 * I want to make these notes collapsible, so I found this https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/markdown/collapsible-items.html
 
 
+# 2/27/24 -- NOTES: JS Modules, DOM, async/wait, promises. Local Storage
 
+**Modules**
+* modules let you partition & share code
+* Node.js is a server-side JS execution application that helps support the importing of JS from 3rd party packages
+* ES modules are 'now almost universal'
+* Node.js modules are called CommonJS modules
+* JavaScript modules are called ES modules
+* you need to `export` objects & `import` them to another file
+```js
+// alert.js
+export function alertDisplay(msg) {
+  alert(msg);
+}
+```
+```js
+// main.js
+import { alertDisplay } from './alert.js';
+
+alertDisplay('called from main.js');
+```
+* modules can only be called from other modules
+* You can't access JS contained in a module from the global scope that you non-module JS is executing in
+* in HTML, you write that you're using an ES module by doing this
+```js
+<script type="module">
+  import { alertDisplay } from './alert.js';
+  alertDisplay('module loaded');
+</script>
+```
+* if we want to use a module in the global scope, we need to put it in there (duh)
+```html
+<html>
+  <body>
+    <script type="module">
+      import { alertDisplay } from './alert.js';
+      window.btnClick = alertDisplay;
+
+      document.body.addEventListener('keypress', function (event) {
+        alertDisplay('Key pressed');
+      });
+    </script>
+    <button onclick="btnClick('button clicked')">Press me</button>
+  </body>
+</html>
+<!-- Now, if the button is pushed or a key is pressed our ES module function will be called. -->
+```
+* fortunately you usually don't have to worry about differentiating between global scope & ES module scope. This is bc most browsers 'expose the ES module directly'
+
+
+**DOM**
+
+* The browser provides access to the DOM through a global variable name document that points to the root element of the DOM.
+```html
+> document
+
+<html lang="en">
+  <body>
+    <p>text1 <span>text2</span></p>
+    <p>text3</p>
+  </body>
+</html>
+```
+```css
+p {
+  color: red;
+}
+```
+* everything in an HTML document has a node in the DOM, this includes: elements, attributes, text, comments, & whitespace.
+<img src='https://github.com/webprogramming260/.github/blob/main/profile/javascript/dom/dom.jpg'>
+
+* __DOM Element Interface__ lets you iterate child elements, access parent elements, & manipulate those element's attributes
+* From your JavaScript code, you can start with the `document` variable and walk through the every element in the tree.
+```js
+function displayElement(el) {
+  console.log(el.tagName);
+  for (const child of el.children) {
+    displayElement(child);
+  }
+}
+
+displayElement(document);
+```
+* "You can provide a CSS selector to the `querySelectorAll` function in order to select elements from the document. The `textContent property` contains all of the element's text. You can even access a textual representation of an element's HTML content with the `innerHTML` property."
+```js
+const listElements = document.querySelectorAll('p');
+for (const el of listElements) {
+  console.log(el.textContent);
+}
+```
+
+* DOM lets you: insert, modify, or delete elements in the DOM
+
+  * to create a new element, you first create it on the DOM document
+  * then you insert the new element into the DOM tree by appending it to an existing element in the tree
+        ```js
+        function insertChild(parentSelector, text) {
+        const newChild = document.createElement('div');
+        newChild.textContent = text;
+
+        const parentElement = document.querySelector(parentSelector);
+        parentElement.appendChild(newChild);
+      }
+
+      insertChild('#courses', 'new course');
+      ```
+
+  * To delete elements, use `removeChild` on the parent element
+      ```js
+        function deleteElement(elementSelector) {
+          const el = document.querySelector(elementSelector);
+          el.parentElement.removeChild(el);
+        }
+
+        deleteElement('#courses div');
+      ```
+  
+  * DOM lets you insert entire blocks of HTML into an element
+    * The following code finds the first `div` element in the DOM and replaces all the HTML it contains.
+      ```js
+        const el = document.querySelector('div');
+        el.innerHTML = '<div class="injected"><b>Hello</b>!</div>';   
+      ```
+
+  * directly injecting HTML as a block of text is a common way for attackers. They can inject JS anywhere & then the JS can make requests to steal info & do bad things. Here is an example
+  ```html
+    <img src="bogus.png" onerror="console.log('All your base are belong to us')" />
+  ```
+
+  * If you are injecting HTML, make sure that it cannot be manipulated by a user. Common injection paths include HTML input controls, URL parameters, and HTTP headers. Either sanitize any HTML that contains variables, or simply use DOM manipulation functions instead of using `innerHTML`.
+
+  * All DOM elements support the ability to attach a function that gets called when an event occurs on the element. These functions are called __event listeners__. Here is an example of an event listener that gets called when an element gets clicked.
+  ```js
+    const submitDataEl = document.querySelector('#submitData');
+    submitDataEl.addEventListener('click', function (event) {
+    console.log(event.type);
+  });
+  ```
+
+  * Here are common event listeners
+    | Event Category | Description           |
+    | -------------- | --------------------- |
+    | Clipboard      | Cut, copied, pasted   |
+    | Focus          | An element gets focus |
+    | Keyboard       | Keys are pressed      |
+    | Mouse          | Click events          |
+    | Text selection | When text is selected |
+
+    * The full list is here [MDN](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+  * you can put event listeners in HTML too. Here's an example using `onclick`
+    ```html
+      <button onclick='alert("clicked")'>click me</button>
+    ```
+
+  **Local Storage**
+  * the `localStorage` API lets you persistently store & retrieve data on a user's browser across user sessions & HTML page renderings
+    * example: store a user's name on one HTML page, it could retrieve it on a different HTML page
+  
+  * `localStorage` can also be used as a cache for when data cannot be obtained form the server
+
+  * There are four main functions that can be used with localStorage.
+
+    | Function             | Meaning                                      |
+    | -------------------- | -------------------------------------------- |
+    | setItem(name, value) | Sets a named item's value into local storage |
+    | getItem(name)        | Gets a named item's value from local storage |
+    | removeItem(name)     | Removes a named item from local storage      |
+    | clear()              | Clears all items in local storage            |
+  
+  * A local storage value must be of type `string`, `number`, or `boolean`. If you want to store a JavaScript object or array, then you must first convert it to a JSON string with `JSON.stringify()` on insertion, and parse it back to JavaScript with `JSON.parse()` when retrieved.
+
+  **Promises, async/await**
+  * Browser rendering in normally single threaded
+  * Things should be asynchronous
+    * Asynchronous basically means not blocking, i.e. not having to wait for an operation to complete.
+  
+  * Example
+    ```js
+      function demo() {
+        console.log('Before timeout');
+
+        setTimeout(() => {
+          console.log('In timeout');
+        }, 5000);
+
+        console.log('After timeout');
+        }
+
+      demo();
+      console.log('Done');
+    ```
+
+  | Call Stack | Web API |
+  |------------|---------|
+  | 'before timeout' <div> demo | |
+  | setTimeout <div> demo | 'in timeout' |
+  | 'after timeout' <div> demo | 'in timeout |
+  | 'done' | 'in timeout' |
+  | 'in timeout' | |
 
