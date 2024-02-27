@@ -353,10 +353,10 @@ f();
 const f = y => ++y;
 console.log(f(3));
 ```
-  * 4 ⬅️
-  * 3
-  * undefined
-  * 2
+    * 4 ⬅️
+    * 3
+    * undefined
+    * 2
 
 * What is the order of the CSS box model, starting from the outside going in?
   * margin, border, padding, content ⬅️
@@ -370,10 +370,10 @@ p {
   padding: 1em;
 }
 ```
-  * Puts space around the content of selected elements ⬅️
-  * Puts space around the border of selected elements
-  * Puts space around the margin of selected elements
-  * Puts space around the HTML document
+    * Puts space around the content of selected elements ⬅️
+    * Puts space around the border of selected elements
+    * Puts space around the margin of selected elements
+    * Puts space around the HTML document
 
 * What does the following code output?
 ```js
@@ -383,10 +383,10 @@ let e = a.map(number => {
 });
 console.log(e);
 ```
-  * [1,2,3]
-  * ['1','2','3']
-  * [66,67,68]
-  * ['a1','a2',a3'] ⬅️
+    * [1,2,3]
+    * ['1','2','3']
+    * [66,67,68]
+    * ['a1','a2',a3'] ⬅️
 
 * How will the "hello world" text be oriented?
 ```html
@@ -408,10 +408,10 @@ console.log(e);
 </body>
 </html>
 ```
-  * One line saying Hello World
-  * One line saying World Hello
-  * Two lines, with the first line saying World & the second saying Hello ⬅️
-  * Two lines, with the first line saying Hello & the second saying World
+    * One line saying Hello World
+    * One line saying World Hello
+    * Two lines, with the first line saying World & the second saying Hello ⬅️
+    * Two lines, with the first line saying Hello & the second saying World
 
 * What is the HTML tag for an unordered list?
   * ```<ul>``` ⬅️
@@ -431,10 +431,10 @@ let a = ['cow', 'rat', 'fish'];
 let b = a.reduce((a,v) => [a,v].join(':'));
 console.log(b);
 ```
-  * cow,rat,fish
-  * cowratfish
-  * cow:rat:fish ⬅️
-  * ['cow', 'rat', 'fish']
+    * cow,rat,fish
+    * cowratfish
+    * cow:rat:fish ⬅️
+    * ['cow', 'rat', 'fish']
 
 * Which of the following is a DNS subdomain?
   * byu.edu
@@ -458,10 +458,10 @@ try {
     console.log('C');
 }
 ```
-  * A B D C
-  * A D B ⬅️
-  * A D B C
-  * A B D
+    * A B D C
+    * A D B ⬅️
+    * A D B C
+    * A B D
 
 * What does the following code output?
 ```js
@@ -469,19 +469,19 @@ let a = ['cow', 'rat', 'fish'];
 let b = a.filter(v => v.match(/A|f/i));
 console.log(b);
 ```
-  * ['rat', 'fish'] ⬅️ *this basically checks if the word has an 'a' or 'f'. The i on the end means it's not case-sensitive*
-  * ['cow', 'rat', 'fish']
-  * ['fish']
-  * ['cow', 'fish']
+    * ['rat', 'fish'] ⬅️ *this basically checks if the word has an 'a' or 'f'. The i on the end means it's not case-sensitive*
+    * ['cow', 'rat', 'fish']
+    * ['fish']
+    * ['cow', 'fish']
 
 * What does the following code do?
 ```js
 document.querySelector('p').addEventListener('mouseover', console.log);
 ```
-  * Adds p.mouseover to console.log event
-  * Adds a mouseover event listener to a p element ⬅️ *beacuse it was querySelector, it finds the first one. if it was allSelector then it would be all p elements*
-  * Adds a mouseover event listener to console.log events on a p element
-  * Adds a mouseover event listener to all p elements
+    * Adds p.mouseover to console.log event
+    * Adds a mouseover event listener to a p element ⬅️ *beacuse it was querySelector, it finds the first one. if it was allSelector then it would be all p elements*
+    * Adds a mouseover event listener to console.log events on a p element
+    * Adds a mouseover event listener to all p elements
 
 * In HTML, what does ```<div>``` do?
   * Creates a division element ⬅️
@@ -553,10 +553,10 @@ p
 
 console.log('fries');
 ```
-  * burger fries taco shake salad noodles
-  * taco burger shake salad noodles fries
-  * taco burger shake salad noodles salad fries
-  * burger fries taco shake noodles ⬅️
+    * burger fries taco shake salad noodles
+    * taco burger shake salad noodles fries
+    * taco burger shake salad noodles salad fries
+    * burger fries taco shake noodles ⬅️
 
 
 
