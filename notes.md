@@ -155,3 +155,64 @@
 * add presets to the editor in case people don't want to tinker with it
 * I discovered that this is where I can find all emojis https://emojipedia.org/
 * put a spellchecker extension in VSCode & fixed all my misspellings lol
+
+## 2/26/24 Javascript Notes
+* Here is a site that has tons of example functions in JS https://htmlpreview.github.io/?https://github.com/webprogramming260/.github/blob/main/profile/javascript/introduction/jsDemo.html
+
+##### Exceptions
+* `try {
+  // normal execution code
+} catch (err) {
+  // exception handling code
+} finally {
+  // always called code
+}`
+* if the `try` gets an exception, then it calls `catch`. `finally` can be put after, it always runs regardless if there was an exception
+* only throw exceptions if it's "exceptional"
+* "To implement the fallback pattern you put the normal feature path in a try block and then provide a fallback implementation in the catch block."
+* `function getScores() {
+  try {
+    const scores = scoringService.getScores();
+    // store the scores so that we can use them later if the network is not available
+    window.localStorage.setItem('scores', scores);
+    return scores;
+  } catch {
+    return window.localStorage.getItem('scores');
+  }
+}`
+
+##### Destructuring
+* `const a = [1, 2, 4, 5];
+
+// destructure the first two items from a, into the new variables b and c
+const [b, c] = a;
+
+console.log(b, c);
+// OUTPUT: 1, 2`
+* `const [b, c, ...others] = a;
+
+console.log(b, c, others);
+// OUTPUT: 1, 2, [4,5]`
+* `const o = { a: 1, b: 'animals', c: ['fish', 'cats'] };
+
+const { a, c } = o;
+
+console.log(a, c);
+// OUTPUT 1, ['fish', 'cats']`
+* `const o = { a: 1, b: 'animals', c: ['fish', 'cats'] };
+
+const { a: count, b: type } = o;
+
+console.log(count, type);
+// OUTPUT 1, animals`
+* `const { a, b = 22 } = {};
+const [c = 44] = [];
+
+console.log(a, b, c);
+// OUTPUT: undefined, 22, 44`
+* `let a = 22;
+
+[a] = [1, 2, 3];
+
+console.log(a);
+// OUTPUT: 1`
