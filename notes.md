@@ -104,7 +104,7 @@
     * stopped working on this to go on a date at 5pm
     * resumed working on this on 2/16/24 at 6pm
     * made the footer always appear at the bottom
-    * turns out opacity is an attribute you can put in the HTML itself. pretty epic. '''html <hr style="opacity:0" />'''
+    * turns out opacity is an attribute you can put in the HTML itself. pretty epic. `<hr style="opacity:0" />`
     * added transparent horizontal rule
     * I'm now realizing it's good to do the styling within the HTML if it's not going to change a lot or if I don't want to make a class to make CSS code for that specific thing.
     * Aligned the welcome message on the home page
@@ -160,17 +160,17 @@
 * Here is a site that has tons of example functions in JS https://htmlpreview.github.io/?https://github.com/webprogramming260/.github/blob/main/profile/javascript/introduction/jsDemo.html
 
 ##### Exceptions
-* `try {
+* ```try {
   // normal execution code
 } catch (err) {
   // exception handling code
 } finally {
   // always called code
-}`
+}```
 * if the `try` gets an exception, then it calls `catch`. `finally` can be put after, it always runs regardless if there was an exception
 * only throw exceptions if it's "exceptional"
 * "To implement the fallback pattern you put the normal feature path in a try block and then provide a fallback implementation in the catch block."
-* `function getScores() {
+* ```function getScores() {
   try {
     const scores = scoringService.getScores();
     // store the scores so that we can use them later if the network is not available
@@ -179,10 +179,10 @@
   } catch {
     return window.localStorage.getItem('scores');
   }
-}`
+}```
 
 ##### Destructuring
-* `const a = [1, 2, 4, 5];
+* ```const a = [1, 2, 4, 5];
 
 // destructure the first two items from a, into the new variables b and c
 const [b, c] = a;
@@ -192,8 +192,8 @@ console.log(b, c);
 * `const [b, c, ...others] = a;
 
 console.log(b, c, others);
-// OUTPUT: 1, 2, [4,5]`
-* `const o = { a: 1, b: 'animals', c: ['fish', 'cats'] };
+// OUTPUT: 1, 2, [4,5]```
+* ```const o = { a: 1, b: 'animals', c: ['fish', 'cats'] };
 
 const { a, c } = o;
 
@@ -204,8 +204,8 @@ console.log(a, c);
 const { a: count, b: type } = o;
 
 console.log(count, type);
-// OUTPUT 1, animals`
-* `const { a, b = 22 } = {};
+// OUTPUT 1, animals```
+* ```const { a, b = 22 } = {};
 const [c = 44] = [];
 
 console.log(a, b, c);
@@ -215,4 +215,4 @@ console.log(a, b, c);
 [a] = [1, 2, 3];
 
 console.log(a);
-// OUTPUT: 1`
+// OUTPUT: 1```
