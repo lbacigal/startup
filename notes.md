@@ -160,15 +160,6 @@
 * Here is a site that has tons of example functions in JS https://htmlpreview.github.io/?https://github.com/webprogramming260/.github/blob/main/profile/javascript/introduction/jsDemo.html
 
 ##### Exceptions
-```js
-    try {
-  // normal execution code
-} catch (err) {
-  // exception handling code
-} finally {
-  // always called code
-}
-```
 * if the `try` gets an exception, then it calls `catch`. `finally` can be put after, it always runs regardless if there was an exception
 * only throw exceptions if it's "exceptional"
 * "To implement the fallback pattern you put the normal feature path in a try block and then provide a fallback implementation in the catch block."
@@ -233,3 +224,116 @@ let a = 22;
 console.log(a);
 // OUTPUT: 1
 ```
+
+##### Javascript Scope
+4 types of JavaScript scope:
+1. **Global** - Visible to all code
+1. **Module** - Visible to all code running in a module
+1. **Function** - Visible within a function
+1. **Block** - Visible within a block of code delimited by curly braces
+
+* `var` lets itself be changed & overwritten, whereas `let` & `const` can't be changed. If you call `let` or `const` again with the same name, it makes a new variable with the same name, rather than overwriting the old one.
+```js
+var x = 10;
+console.log('start', x);
+
+for (var x = 0; x < 1; x++) {
+  console.log('middle', x);
+}
+
+console.log('end', x);
+
+// OUTPUT: start 10
+//         middle 0
+//         end 1
+```
+* TLDR: just use `let` & `const`
+
+
+3 different contexts that `this` can refer to
+1. **Global** - When `this` is referenced outside a function or object it refers to the `globalThis` object. The globalThis object represents the context for runtime environment. For example, when running in a browser, globalThis refers to the browser's window object.
+1. **Function** - When `this` is referenced in a function it refers to the object that owns the function. That is either an object you defined or globalThis if the function is defined outside of an object. Note that when running in JavaScript strict mode, a global function's this variable is undefined instead of globalThis.
+1. **Object** - When `this` is referenced in an object it refers to the object.
+
+```js
+'use strict';
+
+// global scope
+console.log('global:', this);
+console.log('globalThis:', globalThis);
+
+// function scope for a global function
+function globalFunc() {
+  console.log('globalFunctionThis:', this);
+}
+globalFunc();
+
+// object scope
+class ScopeTest {
+  constructor() {
+    console.log('objectThis:', this);
+  }
+
+  // function scope for an object function
+  objectFunc() {
+    console.log('objectFunctionThis:', this);
+  }
+}
+
+new ScopeTest().objectFunc();
+```
+
+Running the above code in a browser results in the following.
+
+```
+global: Window
+globalThis: Window
+globalFunctionThis: undefined
+objectThis: ScopeTest
+objectFunctionThis: ScopeTest
+```
+
+Example of a **Closure** function
+```js
+globalThis.x = 'global';
+
+const obj = {
+  x: 'object',
+  f: function () {
+    console.log(this.x);
+  },
+};
+
+obj.f();
+// OUTPUT: object
+```
+* Arrow functions inherit the `this` pointer of their creation context
+Example of arrow function
+```js
+globalThis.x = 'global';
+
+const obj = {
+  x: 'object',
+  f: () => console.log(this.x),
+};
+
+obj.f();
+// OUTPUT: global
+```
+
+* if we have a function **return** an arrow function, the `this` pointer will be in the object
+```js
+globalThis.x = 'global';
+
+const obj = {
+  x: 'object',
+  make: function () {
+    return () => console.log(this.x);
+  },
+};
+
+const f = obj.make();
+f();
+// OUTPUT: object
+```
+
