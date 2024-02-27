@@ -337,8 +337,9 @@ f();
 // OUTPUT: object
 ```
 
+
 # Midterm Review Questions
----
+
 * Which of the following is NOT a valid way to include JS in HTML?
   * ```<script>1+1</script>```
   * ```<script src='main.js' />```
