@@ -799,3 +799,60 @@ for (const el of listElements) {
   | 'done' | 'in timeout' |
   | 'in timeout' | |
 
+  **Promise**
+  * __Pending__ - Currently running asynchronously
+  * __Fulfilled__ - Completed successfully
+  * __Rejected__ - Failed to complete
+  
+  * Here is a link to slides that help explain this https://docs.google.com/presentation/d/1_RKk91Px_UJdgroZPNqFkJI_MA_Xsul1ocp66qljET4/edit?usp=sharing
+
+<img src='https://miro.medium.com/v2/resize:fit:1024/1*yAFctUA8useVWRbC-nWhBA.png>' >
+<img src='https://i.stack.imgur.com/UX8JM.png'>
+
+  **Async/await**
+  * `await` wraps the execution of a promise & removes the need to chain functions
+  * `async` will not auto-generate a promise if not explicitly returned
+  * `await` blocks until the promise moves to `fulfilled`, or throws an exception if the state moves to `rejected`
+
+    Example Function
+    ```js
+          const coinToss = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (Math.random() > 0.1) {
+            resolve(Math.random() > 0.5 ? 'heads' : 'tails');
+          } else {
+            reject('fell off table');
+          }
+        }, 1000);
+      });
+    };
+    ```
+
+    then/catch chain version
+    ```js
+    coinToss()
+      .then((result) => console.log(`Toss result ${result}`))
+      .catch((err) => console.error(`Error: ${err}`))
+      .finally(() => console.log(`Toss completed`));
+    ```
+
+    async, try/catch version
+    ```js
+      try {
+        const result = await coinToss();
+        console.log(`Toss result ${result}`);
+      } catch (err) {
+        console.error(`Error: ${err}`);
+      } finally {
+        console.log(`Toss completed`);
+      }
+    ```
+  
+
+
+
+
+
+
+
