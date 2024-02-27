@@ -590,6 +590,12 @@ f();
   * taco burger shake salad noodles salad fries
   * burger fries taco shake noodles ⬅️
 
+#### 2/26/24 -- Just after taking the midterm
+* I read some questions too fast so I missed a handful of Qs
+* There were some things I legit had 0 idea what they meant
+* I'm gonna go through what I missed later & make notes of it in here
+
+* I want to make these notes collapsible, so I found this https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/markdown/collapsible-items.html
 
 
 
