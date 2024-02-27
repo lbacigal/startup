@@ -352,10 +352,10 @@ f();
 
 ---
 * Executing the following will output:
-```js
-const f = y => ++y;
-console.log(f(3));
-```
+  ```js
+  const f = y => ++y;
+  console.log(f(3));
+  ```
 
   * 4 ⬅️
   * 3
@@ -371,11 +371,11 @@ console.log(f(3));
 
 ---
 * The CSS property padding:
-```css
-p {
-  padding: 1em;
-}
-```
+  ```css
+  p {
+    padding: 1em;
+  }
+  ```
 
   * Puts space around the content of selected elements ⬅️
   * Puts space around the border of selected elements
@@ -384,13 +384,13 @@ p {
 
 ---
 * What does the following code output?
-```js
-let a = [1, 2, 3];
-let e = a.map(number => {
-  return ('a' + number)
-});
-console.log(e);
-```
+  ```js
+  let a = [1, 2, 3];
+  let e = a.map(number => {
+    return ('a' + number)
+  });
+  console.log(e);
+  ```
 
   * [1,2,3]
   * ['1','2','3']
@@ -399,25 +399,25 @@ console.log(e);
 
 ---
 * How will the "hello world" text be oriented?
-```html
-<html>
-<head>
-  <style>
-    div {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-      }
-  </style>
-</head>
-<body>
-  <div>
-    <p>Hello</p>
-    <p>World</p>
-  </div>
-</body>
-</html>
-```
+  ```html
+  <html>
+  <head>
+    <style>
+      div {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Hello</p>
+      <p>World</p>
+    </div>
+  </body>
+  </html>
+  ```
 
   * One line saying Hello World
   * One line saying World Hello
@@ -440,11 +440,11 @@ console.log(e);
 
 ---
 * What does the following code output?
-```js
-let a = ['cow', 'rat', 'fish'];
-let b = a.reduce((a,v) => [a,v].join(':'));
-console.log(b);
-```
+  ```js
+  let a = ['cow', 'rat', 'fish'];
+  let b = a.reduce((a,v) => [a,v].join(':'));
+  console.log(b);
+  ```
 
   * cow,rat,fish
   * cowratfish
@@ -460,21 +460,21 @@ console.log(b);
 
 ---
 * What will the following output?
-```js
-const a = async function() {
-  return new Promsie((resolve, reject) => {
-    setTimeout(() => {console.log('D'); resolve(true)}, 10000);
-  })
-}
+  ```js
+  const a = async function() {
+    return new Promsie((resolve, reject) => {
+      setTimeout(() => {console.log('D'); resolve(true)}, 10000);
+    })
+  }
 
-try {
-    console.log('A');
-    await a();
-    console.log('B');
-} catch(e) {
-    console.log('C');
-}
-```
+  try {
+      console.log('A');
+      await a();
+      console.log('B');
+  } catch(e) {
+      console.log('C');
+  }
+  ```
 
   * A B D C
   * A D B ⬅️
@@ -483,11 +483,11 @@ try {
 
 ---
 * What does the following code output?
-```js
-let a = ['cow', 'rat', 'fish'];
-let b = a.filter(v => v.match(/A|f/i));
-console.log(b);
-```
+  ```js
+  let a = ['cow', 'rat', 'fish'];
+  let b = a.filter(v => v.match(/A|f/i));
+  console.log(b);
+  ```
 
   * ['rat', 'fish'] ⬅️ *this basically checks if the word has an 'a' or 'f'. The i on the end means it's not case-sensitive*
   * ['cow', 'rat', 'fish']
@@ -496,9 +496,9 @@ console.log(b);
 
 ---
 * What does the following code do?
-```js
-document.querySelector('p').addEventListener('mouseover', console.log);
-```
+  ```js
+  document.querySelector('p').addEventListener('mouseover', console.log);
+  ```
 
   * Adds p.mouseover to console.log event
   * Adds a mouseover event listener to a p element ⬅️ *beacuse it was querySelector, it finds the first one. if it was allSelector then it would be all p elements*
@@ -567,22 +567,22 @@ document.querySelector('p').addEventListener('mouseover', console.log);
 
 ---
 * What will the following output?
-```js
-const p = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    console.log('taco');
-    resolve(true);
-  }, 10000);
-});
-console.log('burger');
+  ```js
+  const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log('taco');
+      resolve(true);
+    }, 10000);
+  });
+  console.log('burger');
 
-p
-.then((result) => console.log('shake))
-.catch((e) => console.log('salad'))
-.finally(() => console.log('noodles'))
+  p
+  .then((result) => console.log('shake))
+  .catch((e) => console.log('salad'))
+  .finally(() => console.log('noodles'))
 
-console.log('fries');
-```
+  console.log('fries');
+  ```
 
   * burger fries taco shake salad noodles
   * taco burger shake salad noodles fries
