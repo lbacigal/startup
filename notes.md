@@ -339,22 +339,226 @@ f();
 
 # Midterm Review Questions
 * Which of the following is NOT a valid way to include JS in HTML?
-1. <script>1+1</script>
-2. <script src='main.js' />
-3. <div onclick='1+1' />
-4. <javascript>1+1</javascript> ⬅️
+  * ```<script>1+1</script>```
+  * ```<script src='main.js' />```
+  * ```<div onclick='1+1' />```
+  * ```<javascript>1+1</javascript>``` ⬅️
 
 * You can use this CSS to load fonts from Google: @import url('https://fonts.googleapis.com/css?family=Quicksand');
-1. True ⬅️
-2. False
+  * True ⬅️
+  * False
 
 * Executing the following will output:
 ```js
 const f = y => ++y;
 console.log(f(3));
 ```
-1. 4 ⬅️
-2. 3
-3. undefined
-4. 2
+  * 4 ⬅️
+  * 3
+  * undefined
+  * 2
+
+* What is the order of the CSS box model, starting from the outside going in?
+  * margin, border, padding, content ⬅️
+  * content, margin, border , padding
+  * padding, margin, border, content
+  * border, padding, margin, content
+
+* The CSS property padding:
+```css
+p {
+  padding: 1em;
+}
+```
+  * Puts space around the content of selected elements ⬅️
+  * Puts space around the border of selected elements
+  * Puts space around the margin of selected elements
+  * Puts space around the HTML document
+
+* What does the following code output?
+```js
+let a = [1, 2, 3];
+let e = a.map(number => {
+  return ('a' + number)
+});
+console.log(e);
+```
+  * [1,2,3]
+  * ['1','2','3']
+  * [66,67,68]
+  * ['a1','a2',a3'] ⬅️
+
+* How will the "hello world" text be oriented?
+```html
+<html>
+<head>
+  <style>
+    div {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Hello</p>
+    <p>World</p>
+  </div>
+</body>
+</html>
+```
+  * One line saying Hello World
+  * One line saying World Hello
+  * Two lines, with the first line saying World & the second saying Hello ⬅️
+  * Two lines, with the first line saying Hello & the second saying World
+
+* What is the HTML tag for an unordered list?
+  * ```<ul>``` ⬅️
+  * ```<li>``` 
+  * ```<dt>```
+  * ```<ol>```
+
+* The following console command makes a script executable:
+  * ssh deploy.sh
+  * ls -la deploy.sh
+  * chmod +x deploy.sh ⬅️
+  * sudo deploy.sh
+
+* What does the following code output?
+```js
+let a = ['cow', 'rat', 'fish'];
+let b = a.reduce((a,v) => [a,v].join(':'));
+console.log(b);
+```
+  * cow,rat,fish
+  * cowratfish
+  * cow:rat:fish ⬅️
+  * ['cow', 'rat', 'fish']
+
+* Which of the following is a DNS subdomain?
+  * byu.edu
+  * byu
+  * c260.cs.byu.edu ⬅️
+  * edu
+
+* What will the following output?
+```js
+const a = async function() {
+  return new Promsie((resolve, reject) => {
+    setTimeout(() => {console.log('D'); resolve(true)}, 10000);
+  })
+}
+
+try {
+    console.log('A');
+    await a();
+    console.log('B');
+} catch(e) {
+    console.log('C');
+}
+```
+  * A B D C
+  * A D B ⬅️
+  * A D B C
+  * A B D
+
+* What does the following code output?
+```js
+let a = ['cow', 'rat', 'fish'];
+let b = a.filter(v => v.match(/A|f/i));
+console.log(b);
+```
+  * ['rat', 'fish'] ⬅️ *this basically checks if the word has an 'a' or 'f'. The i on the end means it's not case-sensitive*
+  * ['cow', 'rat', 'fish']
+  * ['fish']
+  * ['cow', 'fish']
+
+* What does the following code do?
+```js
+document.querySelector('p').addEventListener('mouseover', console.log);
+```
+  * Adds p.mouseover to console.log event
+  * Adds a mouseover event listener to a p element ⬅️ *beacuse it was querySelector, it finds the first one. if it was allSelector then it would be all p elements*
+  * Adds a mouseover event listener to console.log events on a p element
+  * Adds a mouseover event listener to all p elements
+
+* In HTML, what does ```<div>``` do?
+  * Creates a division element ⬅️
+  * creates a dividend element
+  * creater a divider element
+  * creates a divinity element
+
+* What does the DOM textContent property do?
+  * Sets the text content for the entire DOM
+  * Sets the Child HTML for an element
+  * Sets the content spacing for the element
+  * Sets the child text for the an element ⬅️
+
+* Which of the following is a valid JavaScript object?
+  * {"n"=1}
+  * {"n"="1"}
+  * {n=1}
+  * {n:1} ⬅️
+
+* Which HTML will create a valid hyperlink?
+  * ```<a href='https://c.com'>x</a>``` ⬅️
+  * ```<link src='https://c.com'>x</link>```
+  * ```<a arc='https://c.com'>x</a>```
+  * ```<link href='https://c.com'>x</link>```
+
+* Which of the following is valid JSON?
+  * {"x":undefined}
+  * {x:3}
+  * {"x":3} ⬅️
+  * {'x':3}
+
+* To point to another DNS record, you should use the following DNS record type:
+  * SOA
+  * A
+  * CNAME ⬅️
+  * TXT
+
+* Which of the following is NOT a valid JavaScript function?
+  * const f = (x) => {}
+  * const f = function(x) {}
+  * function f(x) {}
+  * function f(x) = {} ⬅️
+
+* Using CSS, how would you turn only the BYU text blue?
+  ```html
+  <div>other</div>
+  <div class="header">BYU</div>
+  ```
+  * div.header{color:blue;} ⬅️ *this means you only want the 'header' class to be inside a div*
+  * div {color:blue;}
+  * div#header {color:blue;}
+  * header {color:blue;}
+
+
+* What will the following output?
+```js
+const p = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('taco');
+    resolve(true);
+  }, 10000);
+});
+console.log('burger');
+
+p
+.then((result) => console.log('shake))
+.catch((e) => console.log('salad'))
+.finally(() => console.log('noodles'))
+
+console.log('fries');
+```
+  * burger fries taco shake salad noodles
+  * taco burger shake salad noodles fries
+  * taco burger shake salad noodles salad fries
+  * burger fries taco shake noodles ⬅️
+
+
+
+
 
