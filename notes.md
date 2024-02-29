@@ -928,7 +928,7 @@ console.log(await cow());
 
 # Startup JavaScript 
 * created 5 .js files for each page. I might not need all of them but I made it anyway. I put placeholder/things I need for each one.
-
+* tried adding eventlistener to the index.js file
 
 
 
