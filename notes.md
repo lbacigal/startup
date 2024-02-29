@@ -809,7 +809,7 @@ for (const el of listElements) {
 <img src='https://miro.medium.com/v2/resize:fit:1024/1*yAFctUA8useVWRbC-nWhBA.png>' >
 <img src='https://i.stack.imgur.com/UX8JM.png'>
 
-  **Async/await**
+**Async/await**
   * `await` wraps the execution of a promise & removes the need to chain functions
   * `async` will not auto-generate a promise if not explicitly returned
   * `await` blocks until the promise moves to `fulfilled`, or throws an exception if the state moves to `rejected`
@@ -849,7 +849,85 @@ for (const el of listElements) {
       }
     ```
   
+**Async**
+  * you cannot call `await` unless it is called at the top level of the JavaScript, or is in a function that is defined with the `async` keyword
+  * using `async` transforms the function that it returns a promise that will resolve to the value that was previously returned by the function.
+  * TLDR: `async` makes a function an asynchronous function, so it can make asynchronous requests
 
+  * This can be demonstrated with a function that makes animal noises. Notice that the return value is a simple string.
+
+    ```js
+    function cow() {
+      return 'moo';
+    }
+    console.log(cow());
+    // OUTPUT: moo
+    ```
+
+  * If we designate the function to be asynchronous then the return value becomes a promise that is immediately resolved and has a value that is the return value of the function.
+
+    ```js
+    async function cow() {
+      return 'moo';
+    }
+    console.log(cow());
+    // OUTPUT: Promise {<fulfilled>: 'moo'}
+    ```
+
+* We then change the cow function to explicitly create a promise instead of the automatically generated promise that the await keyword generates.
+
+    ```js
+      async function cow() {
+        return new Promise((resolve) => {
+          resolve('moo');
+        });
+      }
+      console.log(cow());
+      // OUTPUT: Promise {<pending>}
+    ```
+
+**Await**
+  * `async` keyword declares that a function returns a promise
+  * `await` wraps a call to the `async` function, blocks executing until the promise has resolves, & then returns the result of the promise.
+  * We can demonstrate `await` in action with the cow promise from above. If we log the output from invoking `cow` then we see that the return value is a promise. However, if we prefix the call to the function with the await keyword, execution will stop until the promise has resolved, at which point the result of the promise is returned instead of the actual promise object.
+
+```js
+console.log(cow());
+// OUTPUT: Promise {<pending>}
+
+console.log(await cow());
+// OUTPUT: moo
+```
+
+* By combining `async`, to define functions that return promises, with `await`, to wait on the promise, you can create code that is asynchronous, but still maintains the flow of the code without explicitly using callbacks.
+
+* `async/await` is useful when multiple promises are required.
+* For example, when calling the `fetch` web API on an endpoint that returns JSON, you would need to resolve two promises. One for the network call, and one for converting the result to JSON. A promise implementation would look like the following.
+
+  ```js
+  const httpPromise = fetch('https://simon.cs260.click/api/user/me');
+  const jsonPromise = httpPromise.then((r) => r.json());
+  jsonPromise.then((j) => console.log(j));
+  console.log('done');
+
+  // OUTPUT: done
+  // OUTPUT: {email: 'bud@mail.com', authenticated: true}
+  ```
+
+* With async/await, you can clarify the code intent by hiding the promise syntax, and also make the execution block until the promise is resolved.
+
+  ```js
+  const httpResponse = await fetch('https://simon.cs260.click/api/user/me');
+  const jsonResponse = await httpResponse.json();
+  console.log(jsonResponse);
+  console.log('done');
+
+  // OUTPUT: {email: 'bud@mail.com', authenticated: true}
+  // OUTPUT: done
+  ```
+
+# Startup JavaScript 
+* created 5 .js files for each page. I might not need all of them but I made it anyway. I put placeholder/things I need for each one.
 
 
 
