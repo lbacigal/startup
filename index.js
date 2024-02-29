@@ -1,33 +1,29 @@
 
-
-
-
-// login database array thing
+// document.getElementById('sign-in').onclick = function() {
+//     this.disabled = true;
+//     // …
+// }
 
 let database_array = [];
 
-let event_thing = document.getElementsByClassName("btn-primary")
+let add_to_database=() => {
+    let login_info = document.getElementById("exampleDropdownFormEmail1").value;
 
-event_thing.addEventListener("click", add_to_database());
+    let password = document.getElementById("exampleDropdownFormPassword1").value;
 
-document.getElementById("exampleDropdownFormEmail1").innerHTML =  login;
+    database_array.push({"username":login_info, "password":password});
 
-document.getElementById("exampleDropdownFormPassword1").innerHTML = password;
-
-function add_to_database(login, password) {
-    database_array.push([login, password]);
     console.log('added stuff to database');
+    console.log(database_array);
+
 };
 
+document.getElementById('sign-in').onclick = function() {
+    this.disabled = true;
+    add_to_database();
+}
 
-
-
-
-
-
-
-
-
+// login database array thing
 
 
 
