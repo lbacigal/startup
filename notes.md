@@ -932,5 +932,9 @@ console.log(await cow());
 * got the login stuff to work! but every time I use it in the LiveServer, it resets itself unless I type in random crap that isn't an email address
 * Turns out CanvasJS is a library that is meant to edit photos, so I'll most likely be using that
 
-
-
+# Fetch
+* This is super cool!
+* `fetch` is the preferred way to make HTTP requests
+* it's built into the browsers Javascript runtime (you can run it in JS)
+* `fetch` takes a url & returns a promise
+* If the returned content is of type `application/json` you can use the `json` function on the response object to convert it to a JavaScript object.
