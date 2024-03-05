@@ -76,4 +76,11 @@ Here is the general CSS style for Memefryer
 - **Application text content** - Consistent sans-serif font on all pages. All text is orange to ensure readability with grey background theme.
 - **Application images** - community tab images/text float a little bit when hovered over.
 
+# JavaScript Deliverable
+Currently each of these technologies are placeholders, which will be modified & implemented later
+- **Login** - placeholder array for login information
+- **Community post Database** - placeholder array for posts the community has made & uploaded
+- **Post Reaction** - placeholders for people to upvote / downvote posts they see
+- **Editor Tab Controls** - placeholders for the editor tab so the different image values can change
+
 [Notes/things I learned along the way](notes.md)

@@ -938,3 +938,11 @@ console.log(await cow());
 * it's built into the browsers Javascript runtime (you can run it in JS)
 * `fetch` takes a url & returns a promise
 * If the returned content is of type `application/json` you can use the `json` function on the response object to convert it to a JavaScript object.
+
+# Startup JavaScript continued 3/4/24
+* I want to add an upvote & downvote button for the images in the community tab
+* Potential codepens I can use to help make the upvote/downvote buttons work
+  * https://codepen.io/bennettfeely/pen/bGEpVv
+  * https://codepen.io/ozzie/pen/xbZrRM
+* I realized I need to put a canvas in the editor tab in order for me to use any JS to change it
+* 
