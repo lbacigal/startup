@@ -84,6 +84,18 @@ input {
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
+
+.image-area {
+  flex-grow: 1;
+  padding: 20px;
+  background: #555555;
+}
+
+#canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /* Brightness
 Contrast
 Saturation

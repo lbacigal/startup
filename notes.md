@@ -945,4 +945,6 @@ console.log(await cow());
   * https://codepen.io/bennettfeely/pen/bGEpVv
   * https://codepen.io/ozzie/pen/xbZrRM
 * I realized I need to put a canvas in the editor tab in order for me to use any JS to change it
-* 
+* I'm gonna use this article to help me do things in the editor tab
+  * https://code.tutsplus.com/creating-an-image-editor-using-camanjs-applying-basic-filters--cms-30251t
+  
