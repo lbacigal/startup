@@ -26,21 +26,21 @@ h1 {
     border-bottom: black solid clear;
     box-shadow: 0 0 5px #ffbb00;
   }
-  
+
   .menu li {
     margin: 0 10px;
   }
-  
+
   .menu a {
     text-decoration: none;
     color: #e7b203;
   }
-  
+
   /* Additional styling for better visibility */
   .menu li:hover {
     background-color: #c7980075;
   }
-  
+
   .menu li a {
     display: block;
     padding: 10px;
@@ -70,7 +70,7 @@ html {
   background: #f5f4f4;
   /* font-size: 13px; */
   /* font-family: 'Arvo', monospace; */
-  
+
   @supports(display: grid) {
     display: block;
   }
@@ -82,19 +82,19 @@ html {
     /* background-color: #ffffff00 */
     background-color: #3d3d3d !important;
     /* color: red !important; */
-    
+
     font-size: 25px;
     text-shadow: 1.6px 1.6px black;
-    
+
     @media screen and (min-width: 768px) {
       padding: 4rem;
     }
-    
+
     @supports(display: grid) {
       display: block;
     }
   }
-  
+
   h1 {
     font-size: 2rem;
     margin: 0 0 1.5em;
@@ -132,24 +132,24 @@ html {
     /* transition: transform 0.3s ease-in-out; */
     cursor: pointer;
     counter-increment: item-counter;
-    
+
     &:nth-of-type(3n) {
       background-image: url('https://play-lh.googleusercontent.com/cFCPg91uTbCip6YjbpLegUaxtBcNwBC-WyJoyzzAvMqhBdnVIOmMwbSywqGy6pM2Ow')
     }
-    
+
     &:nth-of-type(4n) {
       background-image: url('https://images7.memedroid.com/images/UPLOADED638/5fbd2a647933f.jpeg');
     }
-    
+
     &:nth-of-type(5n) {
       background-image: url('https://steamuserimages-a.akamaihd.net/ugc/877502998076475450/D8CA8DF60160CDD96C5CCACF7A023966B14F6956/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
     }
-    
+
     &:nth-of-type(6n) {
       background-image: url('https://pm1.aminoapps.com/7003/02eafa6c017dfbe79c34c83bfbc7189d30cef89er1-750-745v2_uhq.jpg');
     }
-    
-    &:after {
+
+    /* &:after {
       /* content: ''; */
       /* position: absolute; */
       /* width: 100%; */
@@ -157,33 +157,33 @@ html {
       /* background-color: black; */
       /* opacity: 0.3; */
       /* transition: opacity 0.3s ease-in-out; */
-    }
-    
+    } */
+
     &:hover {
       transform: scale(1.01);
-      
+
       &:after {
         opacity: 0;
       }
     }
-  
+
     &--medium {
       grid-row-end: span 2;
     }
-  
+
     &--large {
       grid-row-end: span 3;
     }
-  
+
     &--full {
       grid-column-end: auto;
-  
+
       @media screen and (min-width: 768px) {
         grid-column: 1/-1;
         grid-row-end: span 2;
       }
     }
-    
+
     &__details {
       position: relative;
       z-index: 1;
@@ -193,7 +193,7 @@ html {
       text-transform: lowercase;
       letter-spacing: 1px;
       /* color: #828282; */
-      
+
       &:before {
         content: counter(item-counter);
         font-weight: bold;
@@ -202,5 +202,5 @@ html {
         /* color: #942828; */
       }
     }
-  }
+
 
