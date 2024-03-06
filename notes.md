@@ -930,7 +930,7 @@ console.log(await cow());
 * created 5 .js files for each page. I might not need all of them but I made it anyway. I put placeholder/things I need for each one.
 * tried adding eventlistener to the index.js file
 * got the login stuff to work! but every time I use it in the LiveServer, it resets itself unless I type in random crap that isn't an email address
-* Turns out CanvasJS is a library that is meant to edit photos, so I'll most likely be using that
+* Turns out CamanJS is a library that is meant to edit photos, so I'll most likely be using that
 
 # Fetch
 * This is super cool!
@@ -949,4 +949,5 @@ console.log(await cow());
   * https://code.tutsplus.com/creating-an-image-editor-using-camanjs-applying-basic-filters--cms-30251t
 
 # Startup JavaScript continued 3/6/24
-  *
+  * I found this from a guy on YT & it doesn't require me to use the CamanJS library to do it
+    * https://codepen.io/dcode-software/pen/qBxJdJQ
