@@ -774,7 +774,7 @@ for (const el of listElements) {
   * Browser rendering in normally single threaded
   * Things should be asynchronous
     * Asynchronous basically means not blocking, i.e. not having to wait for an operation to complete.
-  
+
   * Example
     ```js
       function demo() {
@@ -803,7 +803,7 @@ for (const el of listElements) {
   * __Pending__ - Currently running asynchronously
   * __Fulfilled__ - Completed successfully
   * __Rejected__ - Failed to complete
-  
+
   * Here is a link to slides that help explain this https://docs.google.com/presentation/d/1_RKk91Px_UJdgroZPNqFkJI_MA_Xsul1ocp66qljET4/edit?usp=sharing
 
 <img src='https://miro.medium.com/v2/resize:fit:1024/1*yAFctUA8useVWRbC-nWhBA.png>' >
@@ -848,7 +848,7 @@ for (const el of listElements) {
         console.log(`Toss completed`);
       }
     ```
-  
+
 **Async**
   * you cannot call `await` unless it is called at the top level of the JavaScript, or is in a function that is defined with the `async` keyword
   * using `async` transforms the function that it returns a promise that will resolve to the value that was previously returned by the function.
@@ -926,7 +926,7 @@ console.log(await cow());
   // OUTPUT: done
   ```
 
-# Startup JavaScript 
+# Startup JavaScript
 * created 5 .js files for each page. I might not need all of them but I made it anyway. I put placeholder/things I need for each one.
 * tried adding eventlistener to the index.js file
 * got the login stuff to work! but every time I use it in the LiveServer, it resets itself unless I type in random crap that isn't an email address
@@ -951,3 +951,45 @@ console.log(await cow());
 # Startup JavaScript continued 3/6/24
   * I found this from a guy on YT & it doesn't require me to use the CamanJS library to do it
     * https://codepen.io/dcode-software/pen/qBxJdJQ
+
+# Express 3/6/24
+* Provides support for
+  * Routing requests for service endpoints
+  * Manipulating HTTP requests with JSON body content
+  * Generating HTTP responses
+  * Using `middleware` functionality
+  ```js
+  const express = require('express');
+  const app = express();
+
+  app.listen(8080);
+  ```
+* The Express `app` object supports all of the HTTP verbs as functions on the object.
+  ```js
+    app.get('/store/provo', (req, res, next) => {
+    res.send({name: 'provo'});
+  });
+  ```
+* `get` takes 2 parameters: 1. a URL path matching pattern; 2. a callback function that is invoked when the pattern matches
+  * The callback function has 3 parameters: `req`, `res`, & `next`
+    * `next` is for if the routing function wants another function to generate a response
+  * The Express `app` compares the routing function patterns in the order that they are added to the Express `app` object. So if you have two routing functions with patterns that both match, the first one that was added will be called and given the next matching function in the `next` parameter.
+* Express supports path parameters by using the prefix `:`
+  * you can then reference those parameters using the `req.params` object
+```js
+  app.get('/store/:storeName', (req, res, next) => {
+  res.send({name: req.params.storeName});
+});
+```
+* If you wanted an endpoint that used the POST or DELETE HTTP verb then you just use the `post` or `delete` function on the Express `app` object.
+* The route path can also include a limited wildcard syntax or even full regular expressions in path pattern. Here are a couple route functions using different pattern syntax.
+```js
+  // Wildcard - matches /store/x and /star/y
+  app.put('/st*/:storeName', (req, res) => res.send({update: req.params.storeName}));
+
+  // Pure regular expression
+  app.delete(/\/store\/(.+)/, (req, res) => res.send({delete: req.params[0]}));
+```
+* Notice that in these examples the `next` parameter was omitted. Since we are not calling `next` we do not need to include it as a parameter. However, if you do not call `next` then no following middleware functions will be invoked for the request.
+<img src='https://raw.githubusercontent.com/webprogramming260/.github/main/profile/webServices/express/webServicesMiddleware.jpg'>
+* 
