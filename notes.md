@@ -992,4 +992,9 @@ console.log(await cow());
 ```
 * Notice that in these examples the `next` parameter was omitted. Since we are not calling `next` we do not need to include it as a parameter. However, if you do not call `next` then no following middleware functions will be invoked for the request.
 <img src='https://raw.githubusercontent.com/webprogramming260/.github/main/profile/webServices/express/webServicesMiddleware.jpg'>
-* 
+<img src='https://raw.githubusercontent.com/webprogramming260/.github/main/profile/webServices/express/httpRequestSequenceDiagram.jpg'>
+<img src='https://miro.medium.com/v2/resize:fit:638/1*bqTWyL7IFU4Z4xL0y4Su6A.jpeg'>
+<img src='https://miro.medium.com/v2/resize:fit:1080/1*aH2D8bYfhSZd3xp9OtJBVQ.jpeg'>
+<img src='https://www.testkarts.com/img/blog/HTTP-Reuest-Method-by-testkarts.jpg'>
+<img src='https://softuni.org/wp-content/uploads/2022/07/HTTP-Request-Methods-e1657276635747.png;>
+
