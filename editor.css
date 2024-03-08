@@ -9,7 +9,6 @@ body {
   background-color: #3d3d3d !important;
 }
 
-/* Apply styles to the <ul> and <li> elements */
 .menu {
     display: flex;
     justify-content: center;
@@ -53,16 +52,43 @@ h1 {
   text-align: center;
 }
 
-.flex-container {
+.editor {
   display: flex;
-  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.toolbar {
+  width: 250px;
+  background: #3d3d3d;
+}
+
+/* .toolbar {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 10%;
 
+} */
+
+.toolbar-item {
+  padding: 15px;
 }
 
+.tool-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tool-input {
+  width: 100%;
+}
+
+/* 
 form{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -70,21 +96,21 @@ form{
   height:260px;
   margin:0 auto;
 
-}
+} */
 
 
-label {
+/* label {
   grid-column: 1; /* Labels in the first column */
   
-}
+/* } */
 
-input {
+/* /* input {
   grid-column: 2; /* Inputs in the second column */
-  width: 100%; /* Make the inputs fill the available width */
-  box-sizing: border-box; /* Include padding and border in the width */
-}
+/*  width: 100%; /* Make the inputs fill the available width */
+/*  box-sizing: border-box; /* Include padding and border in the width */
+/*}
 
-
+*/
 .image-area {
   flex-grow: 1;
   padding: 20px;

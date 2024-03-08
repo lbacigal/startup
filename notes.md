@@ -998,3 +998,6 @@ console.log(await cow());
 <img src='https://www.testkarts.com/img/blog/HTTP-Reuest-Method-by-testkarts.jpg'>
 <img src='https://softuni.org/wp-content/uploads/2022/07/HTTP-Request-Methods-e1657276635747.png;>
 
+# Startup JavaScript continued on 3/7/24
+* This website is going to help a ton too http://fabricjs.com/image-filters
+* 
