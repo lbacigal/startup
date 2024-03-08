@@ -1000,4 +1000,6 @@ console.log(await cow());
 
 # Startup JavaScript continued on 3/7/24
 * This website is going to help a ton too http://fabricjs.com/image-filters
-* 
+
+# Startup JavaScript continued on 3/8/24
+* Began adding more controls to the editor toolbar, I was running out of space at the bottom so I made the body really tall. I'll adjust it later

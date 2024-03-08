@@ -7,6 +7,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #3d3d3d !important;
+  padding-bottom: 200vh;
 }
 
 .menu {
@@ -61,6 +62,7 @@ h1 {
 .toolbar {
   width: 250px;
   background: #3d3d3d;
+  /* padding-bottom: 100vh; */
 }
 
 /* .toolbar {
@@ -74,7 +76,7 @@ h1 {
 } */
 
 .toolbar-item {
-  padding: 15px;
+  padding: 10px;
 }
 
 .tool-label {
