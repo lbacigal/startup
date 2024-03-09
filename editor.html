@@ -35,7 +35,9 @@
 
   <div class="toolbar">
 
-
+    <div class="toolbar-item">
+      <label> NOT EVERYTHING WORKS YET</label>
+    </div>
     <div class="toolbar-item">
       <input type="file" id="imageFileInput">
     </div>
@@ -85,13 +87,35 @@
       <br>
       <label>Distance: <input type="range" id="remove-color-distance" value="0.02" min="0" max="1" step="0.01"></label>
     </div>
+    <div class="toolbar-item">
+        <label><span>Blend Color:</span> <input type="checkbox" id="blend"></label>
+        <br>
+        <label>Mode:</label>
+          <select id="blend-mode" name="blend-mode">
+            <option selected="" value="add">Add</option>
+            <option value="diff">Diff</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="screen">Screen</option>
+            <option value="lighten">Lighten</option>
+            <option value="darken">Darken</option>
+            <option value="overlay">Overlay</option>
+            <option value="exclusion">Exclusion</option>
+            <option value="tint">Tint</option>
+          </select>
+          <br>
+          <label>Color: <input type="color" id="blend-color" value="#00f900"></label><br>
+          <label>Alpha: <input type="range" id="blend-alpha" min="0" max="1" value="1" step="0.01"></label><br>
+    </div>
+    <div class="toolbar-item">
+      <input type="button" value="Undo" style="background-color: #3d3d3d">
+      <input type="button" value="Redo" style="background-color: #3d3d3d">
+      <input type="button" onclick="alert('pretend this works 🥶')" value="Download" style="background-color: #3d3d3d"/>
+      <input type="reset" value="Reset" style="background-color: #3d3d3d">
 
-
-
+    </div>
 
     <!-- <form> -->
-
-
       <!-- * TODO: change the classes for all of these buttons -->
 
       <!-- <label for="bri">Brightness</label>
@@ -145,18 +169,13 @@
       <input type="reset" value="Reset" style="background-color: #3d3d3d">
     </form> -->
 
-
   </div>
-
-
 
   <div class="image-area">
     <canvas id="canvas" height="500" width="500"></canvas>
   </div>
 
-</div>
-
-
+<!-- </div> -->
 
     <footer>
       <hr/>
@@ -166,8 +185,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script> -->
+    <script src="editor.js"></script>
 </html>
 
 
