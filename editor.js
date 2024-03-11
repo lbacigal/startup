@@ -1,7 +1,10 @@
-
+var canvas = new fabric.Canvas("canvas", {
+  backgroundColor: "black",
+  isDrawingMode: false,
+});
 
 const fileInput = document.querySelector("#imageFileInput");
-const canvas = document.querySelector("#canvas");
+// const canvas = document.querySelector("#canvas");
 const canvasCtx = canvas.getContext("2d");
 const brightnessInput = document.querySelector("#brightness");
 const saturationInput = document.querySelector("#saturation");
@@ -14,6 +17,29 @@ const sharpenInput = document.querySelector("#sharpen");
 const vibranceInput = document.querySelector("#vibrance");
 const pixelateInput = document.querySelector("#pixelate");
 const noiseInput = document.querySelector("#noise")
+
+
+
+fabric.Image.fromURL(
+  imgUrl,
+  (img) => {
+    img.filters.push(
+      new fabric.Image.filters.Saturation({
+        saturation: 2,
+      })
+    );
+    img.applyFilters();
+    img.scale(0.4);
+    img.set("top", 30);
+    img.set("left", 20);
+    canvas.add(img);
+  },
+  { crossOrigin: "anonymous" }
+);
+
+
+
+
 
 //  sharpen, vibrance, pixelate, noise
 
@@ -29,6 +55,8 @@ function resetSettings() {
   settings.vibrance = "50";
   settings.pixelate = "10";
   settings.noise = "0";
+  settings.contrast = "100";
+  settings.hue = "0";
 
   brightnessInput.value = settings.brightness;
   saturationInput.value = settings.saturation;
@@ -99,10 +127,7 @@ noiseInput.addEventListener("change", () =>
 updateSetting("noise", noiseInput.value)
 );
 
-// resetInput.addEventListener("change", () => {
-//     {console.log("reset button was clicked!")}
-//     resetSettings();
-// });
+
 // add event listeners for settings here ^
 
 fileInput.addEventListener("change", () => {
@@ -114,7 +139,9 @@ image.addEventListener("load", () => {
     renderImage();
 });
 
+if (fileInput.files.length > 0) {
 image.src = URL.createObjectURL(fileInput.files[0]);
+}
 });
 
 resetSettings();
