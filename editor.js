@@ -9,6 +9,13 @@ const blurInput = document.querySelector("#blur");
 const inversionInput = document.querySelector("#inversion");
 const contrastInput = document.querySelector("#contrast");
 const hueInput = document.querySelector("#hue");
+const resetInput = document.querySelector("#reset");
+const sharpenInput = document.querySelector("#sharpen");
+const vibranceInput = document.querySelector("#vibrance");
+const pixelateInput = document.querySelector("#pixelate");
+const noiseInput = document.querySelector("#noise")
+
+//  sharpen, vibrance, pixelate, noise
 
 const settings = {};
 let image = null;
@@ -18,6 +25,10 @@ function resetSettings() {
   settings.saturation = "100";
   settings.blur = "0";
   settings.inversion = "0";
+  settings.sharpen = "10";
+  settings.vibrance = "50";
+  settings.pixelate = "10";
+  settings.noise = "0";
 
   brightnessInput.value = settings.brightness;
   saturationInput.value = settings.saturation;
@@ -25,8 +36,12 @@ function resetSettings() {
   inversionInput.value = settings.inversion;
   contrastInput.value = settings.contrast;
   hueInput.value = settings.hue;
-
-// add more settings thing here ^
+  sharpenInput.value = settings.sharpen;
+  vibranceInput.value = settings.vibrance;
+  pixelateInput.value = settings.pixelate;
+  noiseInput.value = settings.noise;
+  console.log("setting have been reset!")
+// add more setting things here ^
 }
 
 function updateSetting(key, value) {
@@ -37,9 +52,9 @@ renderImage();
 }
 
 function generateFilter() {
-const { brightness, saturation, blur, inversion, contrast } = settings;
+const { brightness, saturation, blur, inversion, contrast, hue, sharpen, vibrance, pixelate, noise } = settings;
 
-return `brightness(${brightness}%) saturate(${saturation}%) blur(${blur}px) invert(${inversion}%) contrast(${contrast}%) hue(${hue}%)`;
+return `brightness(${brightness}%) saturate(${saturation}%) blur(${blur}px) invert(${inversion}%) contrast(${contrast}%) hue(${hue}%) sharpen(${sharpen}%) vibrance(${vibrance}%) pixelate(${pixelate}%) noise(${noise}%)`;
 }
 // make sure to add settings in here too ^
 
@@ -69,9 +84,25 @@ updateSetting("contrast", contrastInput.value)
 );
 hueInput.addEventListener("change", () =>
 updateSetting("hue", hueInput.value),
-console.log(hueInput.value)
+// console.log(hueInput.value)
+);
+sharpenInput.addEventListener("change", () =>
+updateSetting("sharpen", sharpenInput.value)
+);
+vibranceInput.addEventListener("change", () =>
+updateSetting("vibrance", vibranceInput.value)
+);
+pixelateInput.addEventListener("change", () =>
+updateSetting("pixelate", pixelateInput.value)
+);
+noiseInput.addEventListener("change", () =>
+updateSetting("noise", noiseInput.value)
 );
 
+// resetInput.addEventListener("change", () => {
+//     {console.log("reset button was clicked!")}
+//     resetSettings();
+// });
 // add event listeners for settings here ^
 
 fileInput.addEventListener("change", () => {
@@ -87,8 +118,4 @@ image.src = URL.createObjectURL(fileInput.files[0]);
 });
 
 resetSettings();
-
-
-
-//  picture editing js stuff
 
