@@ -1,4 +1,14 @@
 
+// Prerequisite: Simon JavaScript deployed to your production environment
+// Prerequisite: A link to your GitHub startup repository prominently displayed on your application's home page
+// Prerequisite: Notes in your startup Git repository README.md file documenting what you modified and added with this deliverable. The TAs will only grade things that have been clearly described as being completed. Review the voter app as an example.
+// Prerequisite: At least 10 git commits spread consistently throughout the assignment period.
+// Significant use of JavaScript to create a viable working application
+// 20% JavaScript support for future login.
+// 20% JavaScript support for future database data.
+// 20% JavaScript support for future WebSocket.
+// 40% JavaScript support for your application's interaction logic.
+
 
 (function() {
     // manually initialize 2 filter backend to give ability to switch:
@@ -14,31 +24,6 @@ fabric.filterBackend = fabric.initFilterBackend();
 fabric.Object.prototype.transparentCorners = false;
 var $ = function(id){return document.getElementById(id)};
 
-// function resetSettings() {
-//     settings.brightness = "100";
-//     settings.saturation = "100";
-//     settings.blur = "0";
-//     settings.inversion = "0";
-//     settings.sharpen = "10";
-//     settings.vibrance = "50";
-//     settings.pixelate = "10";
-//     settings.noise = "0";
-//     settings.contrast = "100";
-//     settings.hue = "0";
-
-//     brightnessInput.value = settings.brightness;
-//     saturationInput.value = settings.saturation;
-//     blurInput.value = settings.blur;
-//     inversionInput.value = settings.inversion;
-//     contrastInput.value = settings.contrast;
-//     hueInput.value = settings.hue;
-//     sharpenInput.value = settings.sharpen;
-//     vibranceInput.value = settings.vibrance;
-//     pixelateInput.value = settings.pixelate;
-//     noiseInput.value = settings.noise;
-//     console.log("setting have been reset!")
-//   // add more setting things here ^
-//   }
 
 function applyFilter(index, filter) {
     var obj = canvas.getActiveObject();
@@ -51,62 +36,62 @@ function applyFilter(index, filter) {
     $('bench').innerHTML = dimString + 'px ' +
       parseFloat(timeEnd-timeStart) + 'ms';
     canvas.renderAll();
-  }
+}
 
-  function getFilter(index) {
-    var obj = canvas.getActiveObject();
-    return obj.filters[index];
-  }
+function getFilter(index) {
+var obj = canvas.getActiveObject();
+return obj.filters[index];
+}
 
-  function applyFilterValue(index, prop, value) {
-    var obj = canvas.getActiveObject();
-    if (obj.filters[index]) {
-      obj.filters[index][prop] = value;
-      var timeStart = +new Date();
-      obj.applyFilters();
-      var timeEnd = +new Date();
-      var dimString = canvas.getActiveObject().width + ' x ' +
-        canvas.getActiveObject().height;
-      $('bench').innerHTML = dimString + 'px ' +
-        parseFloat(timeEnd-timeStart) + 'ms';
-      canvas.renderAll();
+function applyFilterValue(index, prop, value) {
+var obj = canvas.getActiveObject();
+if (obj.filters[index]) {
+    obj.filters[index][prop] = value;
+    var timeStart = +new Date();
+    obj.applyFilters();
+    var timeEnd = +new Date();
+    var dimString = canvas.getActiveObject().width + ' x ' +
+    canvas.getActiveObject().height;
+    $('bench').innerHTML = dimString + 'px ' +
+    parseFloat(timeEnd-timeStart) + 'ms';
+    canvas.renderAll();
     }
-  }
+}
 
-  fabric.Object.prototype.padding = 5;
-  fabric.Object.prototype.transparentCorners = false;
+fabric.Object.prototype.padding = 5;
+fabric.Object.prototype.transparentCorners = false;
 
-  var canvas = this.__canvas = new fabric.Canvas('c'),
-      f = fabric.Image.filters;
+var canvas = this.__canvas = new fabric.Canvas('c'),
+    f = fabric.Image.filters;
 
-  canvas.on({
-    'selection:created': function() {
-      fabric.util.toArray(document.getElementsByTagName('input'))
-                          .forEach(function(el){ el.disabled = false; })
+canvas.on({
+'selection:created': function() {
+    fabric.util.toArray(document.getElementsByTagName('input'))
+                        .forEach(function(el){ el.disabled = false; })
 
-      var filters = ['grayscale', 'invert', 'remove-color', 'sepia',            'brightness', 'contrast', 'saturation', 'vibrance', 'noise', 'pixelate', 'blur', 'sharpen', 'emboss', 'blend-color', 'gamma', 'blend-image', 'hue', 'resize'];
+    var filters = ['grayscale', 'invert', 'remove-color', 'sepia',            'brightness', 'contrast', 'saturation', 'vibrance', 'noise', 'pixelate', 'blur', 'sharpen', 'emboss', 'blend-color', 'gamma', 'blend-image', 'hue', 'resize'];
 
-      for (var i = 0; i < filters.length; i++) {
-        $(filters[i]) && (
-        $(filters[i]).checked = !!canvas.getActiveObject().filters[i]);
-      }
+    for (var i = 0; i < filters.length; i++) {
+    $(filters[i]) && (
+    $(filters[i]).checked = !!canvas.getActiveObject().filters[i]);
+        }
     },
-    'selection:cleared': function() {
-      fabric.util.toArray(document.getElementsByTagName('input'))
-                          .forEach(function(el){ el.disabled = true; })
+'selection:cleared': function() {
+    fabric.util.toArray(document.getElementsByTagName('input'))
+                        .forEach(function(el){ el.disabled = true; })
     }
-  });
+});
 
 var indexF;
 $('webgl').onclick = function() {
-if (this.checked) {
-    fabric.filterBackend = webglBackend;
-} else {
-    fabric.filterBackend = canvas2dBackend;
-}
+    if (this.checked) {
+        fabric.filterBackend = webglBackend;
+    } else {
+        fabric.filterBackend = canvas2dBackend;
+    }
 };
 
-// this updates the value next to the toolbar item
+// ---------- this updates the displayed toolbar value next to the slider -----------------------
 document.addEventListener('input', function(event) {
     if (event.target.classList.contains('slider')) {
       updateSliderValue(event.target.value, event.target.nextElementSibling);
@@ -119,7 +104,7 @@ document.addEventListener('input', function(event) {
     }
   }
 
-
+//  ----------------- editor controls -----------------------------------------------------------
   $('grayscale').onclick = function() {
     applyFilter(0, this.checked && new f.Grayscale());
   };
