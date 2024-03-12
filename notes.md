@@ -1005,10 +1005,11 @@ console.log(await cow());
 * Began adding more controls to the editor toolbar, I was running out of space at the bottom so I made the body really tall. I'll adjust it later
 
 # Startup JavaScript continued on 3/11/24
-ok, it's checklist time bc I've gotten lost in the sauce
+- ok, it's checklist time bc I've gotten lost in the sauce
+- I am going to redo the js using fabric.js (I tried mashing things together but it wasn't working)
 
 **TODO list for Startup JavaScript**
-* [] get the sliders to display current value
+* [x] get the sliders to display current value next to it
 * [] fix import image button
 * [] check that each button/slider works
 * [] fix footer on editor page

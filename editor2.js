@@ -92,26 +92,7 @@ $('webgl').onclick = function() {
 };
 
 // ---------- this lets images be placed into the canvas --------
-document.addEventListener('DOMContentLoaded', function () {
-    var canvas = new fabric.Canvas('canvas');
-    var imageFileInput = document.getElementById('imageFileInput');
-
-    imageFileInput.addEventListener('change', function (event) {
-      var file = event.target.files[0];
-
-      if (file) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-          fabric.Image.fromURL(e.target.result, function (img) {
-            canvas.add(img);
-          });
-        };
-
-        reader.readAsDataURL(file);
-      }
-    });
-  });
+// var canvasObj = new fabric.Canvas(document.getElementById('filereader'));
 
 
 // ---------- this updates the displayed toolbar value next to the slider -----------------------
@@ -125,7 +106,9 @@ document.addEventListener('input', function(event) {
     if (displayElement && displayElement.classList.contains('slider-value')) {
       displayElement.innerText = value;
     }
-  }
+  };
+
+
 
 //  ----------------- editor controls -----------------------------------------------------------
 

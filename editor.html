@@ -40,7 +40,7 @@
       <u style="font-weight:bold">NOT EVERYTHING WORKS YET</u>
     </div>
     <div class="toolbar-item">
-      <input type="file" id="imageFileInput">
+      <input id="filereader" type="file" accept="image/*">
     </div>
     <div class="toolbar-item">
       <label>Use WebGl<input type="checkbox" id="webgl" checked=""></label>
@@ -48,38 +48,43 @@
     <div class="toolbar-item">
       <label><span>Brightness:</span> <input type="checkbox" id="brightness"></label>
       <br>
-      <label>Value: <input type="range" class="slider" id="brightness-value" value="0.1" min="-1" max="1" step="0.003921"></label>
-      <span id="slider-value">0.1</span>
+      <label>Value: <input type="range" class="slider" id="brightness-value" value="0.1" min="-1" max="1" step="0.003921" oninput="document.getElementById('brightness-slider-value').textContent = this.value;"></label>
+      <span id="brightness-slider-value">0.1</span>
     </div>
 
     <div class="toolbar-item">
       <label><span>Hue:</span> <input type="checkbox" id="hue"></label>
       <br>
-      <label>Value: <input type="range" class="slider" id="hue-value" value="0" min="-2" max="2" step="0.002"></label>
+      <label>Value: <input type="range" class="slider" id="hue-value" value="0" min="-2" max="2" step="0.002" oninput="document.getElementById('hue-slider-value').textContent = this.value;"></label>
+      <span id="hue-slider-value">0</span>
     </div>
 
     <div class="toolbar-item">
       <label><span>Contrast:</span> <input type="checkbox" id="contrast"></label>
       <br>
-      <label>Value: <input type="range" class="slider" id="contrast-value" value="0" min="-1" max="1" step="0.003921"></label>
+      <label>Value: <input type="range" class="slider" id="contrast-value" value="0" min="-1" max="1" step="0.003921" oninput="document.getElementById('contrast-slider-value').textContent = this.value;"></label>
+      <span id="contrast-slider-value">0</span>
     </div>
 
     <div class="toolbar-item">
       <label><span>Saturation:</span> <input type="checkbox" id="saturation"></label>
       <br>
-      <label>Value: <input type="range" class="slider" id="saturation-value" value="0" min="-1" max="1" step="0.003921"></label>
+      <label>Value: <input type="range" class="slider" id="saturation-value" value="0" min="-1" max="1" step="0.003921" oninput="document.getElementById('saturation-slider-value').textContent = this.value;"></label>
+      <span id="saturation-slider-value">0</span>
     </div>
 
     <div class="toolbar-item">
       <label><span>Blur:</span> <input type="checkbox" id="blur"></label>
       <br>
-      <label>Value: <input type="range" class="slider" id="blur-value" value="0.1" min="0" max="1" step="0.01"></label>
+      <label>Value: <input type="range" class="slider" id="blur-value" value="0.1" min="0" max="1" step="0.01" oninput="document.getElementById('blur-slider-value').textContent = this.value;"></label>
+      <span id="blur-slider-value">0.1</span>
     </div>
 
     <div class="toolbar-item">
       <label><span>Inversion:</span> <input type="checkbox" id="inversion"></label>
       <br>
-      <label>Value: <input type="range" class="slider" id="inversion-value" value="0.1" min="0" max="1" step="0.01"></label>
+      <label>Value: <input type="range" class="slider" id="inversion-value" value="0.1" min="0" max="1" step="0.01" oninput="document.getElementById('inversion-slider-value').textContent = this.value;"></label>
+      <span id="inversion-slider-value">0.1</span>
       <!-- this might not work because it was a checkbox where I found it -->
       <!-- <p>
         <label><span>Invert:</span> <input type="checkbox" id="invert"></label>
@@ -89,7 +94,8 @@
     <div class="toolbar-item">
       <label><span>Sharpen:</span> <input type="checkbox" id="sharpen"></label>
       <br>
-      <label>Value: <input type="range" class="slider" id="sharpen-value" value="0.1" min="0" max="1" step="0.01"></label>
+      <label>Value: <input type="range" class="slider" id="sharpen-value" value="0.1" min="0" max="1" step="0.01" oninput="document.getElementById('sharpen-slider-value').textContent = this.value;"></label>
+      <span id="sharpen-slider-value">0.1</span>
       <!-- this might not work because it was a checkbox where I found it -->
       <!-- <p>
         <label><span>Sharpen:</span> <input type="checkbox" id="sharpen"></label>
@@ -99,25 +105,28 @@
     <div class="toolbar-item">
       <label><span>Vibrance:</span> <input type="checkbox" id="vibrance"></label>
       <br>
-      <label>Value: <input type="range" class="slider" id="vibrance-value" value="0" min="-1" max="1" step="0.003921"></label>
+      <label>Value: <input type="range" class="slider" id="vibrance-value" value="0" min="-1" max="1" step="0.003921" oninput="document.getElementById('vibrance-slider-value').textContent = this.value;"></label>
+      <span id="vibrance-slider-value">0</span>
     </div>
 
     <div class="toolbar-item">
       <label><span>Pixelate:</span> <input type="checkbox" id="pixelate"></label>
       <br>
-      <label>Value: <input type="range" class="slider" id="pixelate-value" value="4" min="2" max="20"></label>
+      <label>Value: <input type="range" class="slider" id="pixelate-value" value="4" min="2" max="20" oninput="document.getElementById('pixelate-slider-value').textContent = this.value;"></label>
+      <span id="pixelate-slider-value">4</span>
     </div>
 
     <div class="toolbar-item">
       <label><span>Noise:</span> <input type="checkbox" id="noise"></label>
       <br>
-      <label>Value: <input type="range" class="slider" id="noise-value" value="100" min="0" max="1000"></label>
+      <label>Value: <input type="range" class="slider" id="noise-value" value="100" min="0" max="1000" oninput="document.getElementById('noise-slider-value').textContent = this.value;"></label>
+      <span id="noise-slider-value">100</span>
     </div>
     <br>
     <div class="toolbar-item">
       <label><span>Remove color:</span> <input type="checkbox" id="remove-color"></label>
       <label>Color: <input type="color" id="remove-color-color" value="#00f900"></label><br>
-      <label>Distance: <input type="range" class="slider" id="remove-color-distance" value="0.02" min="0" max="1" step="0.01"></label>
+      <label>Distance: <input type="range" class="slider" id="remove-color-distance" value="0.02" min="0" max="1" step="0.01" oninput="document.getElementById('slider-value').textContent = this.value;"></label>
     </div>
     <br>
     <div class="toolbar-item">
@@ -142,10 +151,10 @@
     </div>
     <br>
     <div class="toolbar-item">
-      <input type="button" value="Undo" style="background-color: #3d3d3d">
-      <input type="button" value="Redo" style="background-color: #3d3d3d">
+      <input type="button" onclick="alert('pretend this works 🥶')" value="Undo" style="background-color: #3d3d3d">
+      <input type="button" onclick="alert('pretend this works 🥶')" value="Redo" style="background-color: #3d3d3d">
       <input type="button" onclick="alert('pretend this works 🥶')" value="Download" style="background-color: #3d3d3d"/>
-      <input type="reset" onclick="resetSettings()" value="Reset" style="background-color: #3d3d3d" >
+      <input type="reset" onclick="alert('pretend this works 🥶')" value="Reset" style="background-color: #3d3d3d" >
 
     </div>
 
@@ -204,7 +213,7 @@
 
 </div>
 
-<div class="canvas-container" style="width: 1300px; height: 700px; position: relative; user-select: none;"><canvas id="c" width="1300" height="700" class="lower-canvas" style="position: absolute; width: 1300px; height: 700px; left: 0px; top: 0px; touch-action: none; user-select: none;"></canvas></div>
+<div class="canvas-container" style="width: 1300px; height: 700px; position: relative; user-select: none;"><canvas id="c" width="1000" height="700" class="upper-canvas" style="position: absolute; width: 1300px; height: 700px; left: 0px; top: 0px; touch-action: none; user-select: none;"></canvas></div>
 
 <!-- </div> -->
 
