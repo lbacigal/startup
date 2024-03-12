@@ -42,50 +42,82 @@
       <input type="file" id="imageFileInput">
     </div>
     <div class="toolbar-item">
-      <label class="tool-label" for="brightness">Brightness</label>
-      <input class="tool-input" type="range" id="brightness" min="0" max="200">
+      <label>Use WebGl<input type="checkbox" id="webgl" checked=""></label>
     </div>
     <div class="toolbar-item">
-      <label class="tool-label" for="hue">Hue</label>
-      <input class="tool-input" type="range" id="hue" min="0" max="360">
+      <label><span>Brightness:</span> <input type="checkbox" id="brightness"></label>
+      <br>
+      <label>Value: <input type="range" class="slider" id="brightness-value" value="0.1" min="-1" max="1" step="0.003921"></label>
+      <span id="slider-value">0.1</span>
     </div>
+
     <div class="toolbar-item">
-      <label class="tool-label" for="contrast">Contrast</label>
-      <input class="tool-input" type="range" id="contrast" min="0" max="200">
+      <label><span>Hue:</span> <input type="checkbox" id="hue"></label>
+      <br>
+      <label>Value: <input type="range" class="slider" id="hue-value" value="0" min="-2" max="2" step="0.002"></label>
     </div>
+
     <div class="toolbar-item">
-      <label class="tool-label" for="saturation">Saturation</label>
-      <input class="tool-input" type="range" id="saturation" min="0" max="200">
+      <label><span>Contrast:</span> <input type="checkbox" id="contrast"></label>
+      <br>
+      <label>Value: <input type="range" class="slider" id="contrast-value" value="0" min="-1" max="1" step="0.003921"></label>
     </div>
+
     <div class="toolbar-item">
-      <label class="tool-label" for="blur">Blur</label>
-      <input class="tool-input" type="range" id="blur" min="0" max="25">
+      <label><span>Saturation:</span> <input type="checkbox" id="saturation"></label>
+      <br>
+      <label>Value: <input type="range" class="slider" id="saturation-value" value="0" min="-1" max="1" step="0.003921"></label>
     </div>
+
     <div class="toolbar-item">
-      <label class="tool-label" for="inversion">Inversion</label>
-      <input class="tool-input" type="range" id="inversion" min="0" max="100">
+      <label><span>Blur:</span> <input type="checkbox" id="blur"></label>
+      <br>
+      <label>Value: <input type="range" class="slider" id="blur-value" value="0.1" min="0" max="1" step="0.01"></label>
     </div>
+
     <div class="toolbar-item">
-      <label class="tool-label" for="sharpen">Sharpen</label>
-      <input class="tool-input" type="range" id="sharpen" min="0" max="200">
+      <label><span>Inversion:</span> <input type="checkbox" id="inversion"></label>
+      <br>
+      <label>Value: <input type="range" class="slider" id="inversion-value" value="0.1" min="0" max="1" step="0.01"></label>
+      <!-- this might not work because it was a checkbox where I found it -->
+      <!-- <p>
+        <label><span>Invert:</span> <input type="checkbox" id="invert"></label>
+      </p> -->
     </div>
+
     <div class="toolbar-item">
-      <label class="tool-label" for="vibrance">Vibrance</label>
-      <input class="tool-input" type="range" id="vibrance" min="0" max="200">
+      <label><span>Sharpen:</span> <input type="checkbox" id="sharpen"></label>
+      <br>
+      <label>Value: <input type="range" class="slider" id="sharpen-value" value="0.1" min="0" max="1" step="0.01"></label>
+      <!-- this might not work because it was a checkbox where I found it -->
+      <!-- <p>
+        <label><span>Sharpen:</span> <input type="checkbox" id="sharpen"></label>
+      </p> -->
     </div>
+
     <div class="toolbar-item">
-      <label class="tool-label" for="pixelate">Pixelate</label>
-      <input class="tool-input" type="range" id="pixelate" min="0" max="200">
+      <label><span>Vibrance:</span> <input type="checkbox" id="vibrance"></label>
+      <br>
+      <label>Value: <input type="range" class="slider" id="vibrance-value" value="0" min="-1" max="1" step="0.003921"></label>
     </div>
+
     <div class="toolbar-item">
-      <label class="tool-label" for="noise">Noise</label>
-      <input class="tool-input" type="range" id="noise" min="0" max="200">
+      <label><span>Pixelate:</span> <input type="checkbox" id="pixelate"></label>
+      <br>
+      <label>Value: <input type="range" class="slider" id="pixelate-value" value="4" min="2" max="20"></label>
     </div>
+
+    <div class="toolbar-item">
+      <label><span>Noise:</span> <input type="checkbox" id="noise"></label>
+      <br>
+      <label>Value: <input type="range" class="slider" id="noise-value" value="100" min="0" max="1000"></label>
+    </div>
+
     <div class="toolbar-item">
       <label><span>Remove color:</span> <input type="checkbox" id="remove-color"></label>
       <label>Color: <input type="color" id="remove-color-color" value="#00f900"></label><br>
       <br>
-      <label>Distance: <input type="range" id="remove-color-distance" value="0.02" min="0" max="1" step="0.01"></label>
+      <label>Distance: <input type="range" class="slider" id="remove-color-distance" value="0.02" min="0" max="1" step="0.01">0<span id="slider-value"></span></label>
     </div>
     <div class="toolbar-item">
         <label><span>Blend Color:</span> <input type="checkbox" id="blend"></label>
@@ -186,7 +218,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
-    <script src="editor.js"></script>
+    <script src="editor2.js"></script>
 </html>
 
 
