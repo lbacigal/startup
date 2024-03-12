@@ -7,7 +7,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #3d3d3d !important;
-  padding-bottom: 200vh;
+  /* padding-bottom: 200vh; */
 }
 
 .menu {
@@ -41,12 +41,14 @@ body {
 
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    line-height: 1px;
+  margin-top: auto;
+  position: static;
+  top: 100;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 1px;
 }
 
 h1 {
@@ -113,6 +115,7 @@ form{
 
 */
 .canvas-container {
+  display:flex;
   position: relative;
   user-select: none;
   display: inline-block;

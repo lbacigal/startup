@@ -91,6 +91,29 @@ $('webgl').onclick = function() {
     }
 };
 
+// ---------- this lets images be placed into the canvas --------
+document.addEventListener('DOMContentLoaded', function () {
+    var canvas = new fabric.Canvas('canvas');
+    var imageFileInput = document.getElementById('imageFileInput');
+
+    imageFileInput.addEventListener('change', function (event) {
+      var file = event.target.files[0];
+
+      if (file) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          fabric.Image.fromURL(e.target.result, function (img) {
+            canvas.add(img);
+          });
+        };
+
+        reader.readAsDataURL(file);
+      }
+    });
+  });
+
+
 // ---------- this updates the displayed toolbar value next to the slider -----------------------
 document.addEventListener('input', function(event) {
     if (event.target.classList.contains('slider')) {
@@ -105,21 +128,7 @@ document.addEventListener('input', function(event) {
   }
 
 //  ----------------- editor controls -----------------------------------------------------------
-  $('grayscale').onclick = function() {
-    applyFilter(0, this.checked && new f.Grayscale());
-  };
-  $('average').onclick = function() {
-    applyFilterValue(0, 'mode', 'average');
-  };
-  $('luminosity').onclick = function() {
-    applyFilterValue(0, 'mode', 'luminosity');
-  };
-  $('lightness').onclick = function() {
-    applyFilterValue(0, 'mode', 'lightness');
-  };
-  $('invert').onclick = function() {
-    applyFilter(1, this.checked && new f.Invert());
-  };
+
   $('remove-color').onclick = function () {
     applyFilter(2, this.checked && new f.RemoveColor({
       distance: $('remove-color-distance').value,

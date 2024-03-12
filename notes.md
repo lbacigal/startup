@@ -1003,3 +1003,24 @@ console.log(await cow());
 
 # Startup JavaScript continued on 3/8/24
 * Began adding more controls to the editor toolbar, I was running out of space at the bottom so I made the body really tall. I'll adjust it later
+
+# Startup JavaScript continued on 3/11/24
+ok, it's checklist time bc I've gotten lost in the sauce
+
+**TODO list for Startup JavaScript**
+* [] get the sliders to display current value
+* [] fix import image button
+* [] check that each button/slider works
+* [] fix footer on editor page
+* [] get canvas to resize if desired
+* [] get reset button to work
+* [] change the width of toolbar sliders
+
+**Startup Service Criteria**
+* [] Create an HTTP service using Node.js and Express
+* [] This criterion is linked to a Learning OutcomeFrontend served up using Express static middleware
+* [] Your frontend calls third party service endpoints
+* [] Your backend provides service endpoints
+* [] Your frontend calls your service endpoints
+
+
