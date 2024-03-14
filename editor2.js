@@ -10,6 +10,68 @@
 // 40% JavaScript support for your application's interaction logic.
 
 
+
+
+
+
+// --------------- create a canvas ------------
+const canvas = new fabric.Canvas("c");
+
+init()
+async function init() {
+
+  // Setting the canvas size
+  canvas.setWidth( 1000 );
+  canvas.setHeight( 700 );
+  canvas.calcOffset();
+}
+
+// ! work in progress
+// ------------ load image from computer --------
+// document.addEventListener('filereader', function(event) {
+
+//   const image = new fabric.Image(img);
+//   canvas.add(image)
+
+// });
+
+
+// ------------ create filters --------------
+const filters = {
+  brightness: new fabric.Image.filters.Brightness(),
+  saturation: new fabric.Image.filters.Saturation(),
+  contrast: new fabric.Image.filters.Contrast(),
+  hue: new fabric.Image.filters.HueRotation(),
+  blur: new fabric.Image.filters.Blur(),
+  vibrance: new fabric.Image.filters.Vibrance(),
+  noise: new fabric.Image.filters.Noise(),
+  pixelate: new fabric.Image.filters.Pixelate(),
+  invert: new fabric.Image.filters.Invert(),
+  remove_color: new fabric.Image.filters.RemoveColor(),
+  gamma: new fabric.Image.filters.Gamma()
+
+}
+
+// ['grayscale', 'invert', 'remove-color', 'sepia',            'brightness', 'contrast', 'saturation', 'vibrance', 'noise', 'pixelate', 'blur', 'sharpen', 'emboss', 'blend-color', 'gamma', 'blend-image', 'hue', 'resize'];
+
+// ---------- this updates the displayed toolbar value next to the slider -----------------------
+document.addEventListener('input', function(event) {
+  if (event.target.classList.contains('slider')) {
+    updateSliderValue(event.target.value, event.target.nextElementSibling);
+  }
+});
+
+function updateSliderValue(value, displayElement) {
+  if (displayElement && displayElement.classList.contains('slider-value')) {
+    displayElement.innerText = value;
+  }
+};
+
+
+
+
+
+// 1st attempt at smashing things together that didn't work
 // (function() {
 //     // manually initialize 2 filter backend to give ability to switch:
 //     var webglBackend;
@@ -95,44 +157,10 @@
 //     }
 // };
 
-// ---------- create a canvas --------
-const canvas = new fabric.Canvas("c");
-
-
-// ---------- create filters --------
-const filters = {
-  brightness: new fabric.Image.filters.Brightness(),
-  saturation: new fabric.Image.filters.Saturation(),
-  contrast: new fabric.Image.filters.Contrast(),
-  hue: new fabric.Image.filters.HueRotation(),
-  blur: new fabric.Image.filters.Blur(),
-  vibrance: new fabric.Image.filters.Vibrance(),
-  noise: new fabric.Image.filters.Noise(),
-  pixelate: new fabric.Image.filters.Pixelate(),
-  invert: new fabric.Image.filters.Invert(),
-  remove_color: new fabric.Image.filters.RemoveColor(),
-  gamma: new fabric.Image.filters.Gamma()
-
-}
-
-// ['grayscale', 'invert', 'remove-color', 'sepia',            'brightness', 'contrast', 'saturation', 'vibrance', 'noise', 'pixelate', 'blur', 'sharpen', 'emboss', 'blend-color', 'gamma', 'blend-image', 'hue', 'resize']; 
-
-// ---------- this updates the displayed toolbar value next to the slider -----------------------
-document.addEventListener('input', function(event) {
-    if (event.target.classList.contains('slider')) {
-      updateSliderValue(event.target.value, event.target.nextElementSibling);
-    }
-  });
-
-  function updateSliderValue(value, displayElement) {
-    if (displayElement && displayElement.classList.contains('slider-value')) {
-      displayElement.innerText = value;
-    }
-  };
 
 
 
-//  ----------------- editor controls -----------------------------------------------------------
+//  ----------------- old editor controls -----------------------------------------------------------
 
 
 
@@ -224,9 +252,5 @@ document.addEventListener('input', function(event) {
   //     applyFilterValue(21, 'rotation', this.value);
   //   };
   // };
-
-
-
-
 
 
