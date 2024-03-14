@@ -1013,9 +1013,10 @@ console.log(await cow());
 * [] fix import image button
 * [] check that each button/slider works
 * [] fix footer on editor page
-* [] get canvas to resize if desired
 * [] get reset button to work
 * [] change the width of toolbar sliders
+* [] (optional) get canvas to resize if desired
+
 
 **Startup Service Criteria**
 * [] Create an HTTP service using Node.js and Express
@@ -1024,4 +1025,6 @@ console.log(await cow());
 * [] Your backend provides service endpoints
 * [] Your frontend calls your service endpoints
 
-
+# Startup JavaScript continued on 3/13/24
+* redoing the editor js. I tried to frankenstein it together but it didn't work
+* began using the documentation for Fabric.js at http://fabricjs.com/docs
