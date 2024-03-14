@@ -14,29 +14,49 @@
 
 
 
-// --------------- create a canvas ------------
+// * --------------- create a canvas ------------
 const canvas = new fabric.Canvas("c");
 
 init()
 async function init() {
 
-  // Setting the canvas size
-  canvas.setWidth( 1000 );
-  canvas.setHeight( 700 );
-  canvas.calcOffset();
-}
-
-// ! work in progress
-// ------------ load image from computer --------
-// document.addEventListener('filereader', function(event) {
-
-//   const image = new fabric.Image(img);
-//   canvas.add(image)
-
-// });
+  // Set the canvas size
+  try {
+    canvas.setWidth( 1000 );
+    canvas.setHeight( 700 );
+    canvas.calcOffset();
+    console.log('canvas created!')
+  }
+  catch {console.log('error creating canvas :/')}
+};
 
 
-// ------------ create filters --------------
+// * ------------ load image from computer --------
+document.getElementById('imageFileInput').addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = function(event) {
+      const img = new Image();
+      img.onload = function() {
+          const fabricImg = new fabric.Image(img, {
+              left: 0,
+              top: 0,
+
+          });
+          canvas.add(fabricImg);
+          object = fabricImg;
+      };
+      img.src = event.target.result;
+  };
+
+  if (file) {
+      reader.readAsDataURL(file);
+  }
+});
+
+
+// * ------------ Create filters ---------------------
 const filters = {
   brightness: new fabric.Image.filters.Brightness(),
   saturation: new fabric.Image.filters.Saturation(),
@@ -48,13 +68,86 @@ const filters = {
   pixelate: new fabric.Image.filters.Pixelate(),
   invert: new fabric.Image.filters.Invert(),
   remove_color: new fabric.Image.filters.RemoveColor(),
-  gamma: new fabric.Image.filters.Gamma()
-
+  gamma: new fabric.Image.filters.Gamma(),
+  // sharpen: new fabric.Image.filters.sharpen()
+// emboss?
 }
 
-// ['grayscale', 'invert', 'remove-color', 'sepia',            'brightness', 'contrast', 'saturation', 'vibrance', 'noise', 'pixelate', 'blur', 'sharpen', 'emboss', 'blend-color', 'gamma', 'blend-image', 'hue', 'resize'];
 
-// ---------- this updates the displayed toolbar value next to the slider -----------------------
+// * -------- apply filter values ---------------------
+
+// ! This is currently broken, some of the sliders work but they change things they aren't supposed to
+function handleFilterInput(filterType, inputElement) {
+  const value = parseFloat(inputElement.value);
+  // Edit the filter value based on filter type
+  switch (filterType) {
+    case 'brightness':
+      filters.brightness.brightness = value;
+      break;
+    case 'saturation':
+      filters.saturation.saturation = value;
+      break;
+    case 'contrast':
+      filters.contrast.contrast = value;
+      break;
+    case 'hue':
+      filters.hue.rotation = value;
+      break;
+    case 'blur':
+      filters.blur.blur = value;
+      break;
+    case 'vibrance':
+      filters.vibrance.vibrance = value;
+      break;
+    case 'pixelate':
+    filters.pixelate.pixelate = value;
+      break;
+    case 'invert':
+      filters.invert.invert = value;
+      break;
+    case 'gamma':
+      filters.gamma.gamma = value;
+      break;
+    // case 'sharpen':
+    // filters.sharpen.sharpen = value;
+    // break;
+    case 'noise':
+      filters.noise.noise = value;
+      break;
+    // case 'remove_color':
+    //   filters.remove_color.remove_color = value;
+    //   break;
+    default:
+      break;
+  }
+  if (object) {
+    object.filters = [filters.brightness,
+                      filters.blur,
+                      filters.contrast,
+                      filters.saturation,
+                      filters.hue,
+                      filters.vibrance,
+                      filters.pixelate,
+                      filters.invert,
+                      filters.sharpen,
+                      filters.gamma,
+                      filters.remove_color,
+                      filters.noise // I might need to remove this
+                      ];
+    object.applyFilters();
+    canvas.renderAll();
+  }
+}
+
+// Attach input event listeners for all filters
+document.querySelectorAll('.slider').forEach(inputElement => {
+  const filterType = inputElement.id.replace('-value', '');
+  inputElement.oninput = () => handleFilterInput(filterType, inputElement);
+});
+
+
+// * -------- Update Displayed Filter Value ---------------
+// event listener that updates the filter value next to the slider
 document.addEventListener('input', function(event) {
   if (event.target.classList.contains('slider')) {
     updateSliderValue(event.target.value, event.target.nextElementSibling);

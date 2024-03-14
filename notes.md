@@ -1010,12 +1010,17 @@ console.log(await cow());
 
 **TODO list for Startup JavaScript**
 * [x] get the sliders to display current value next to it
-* [] fix import image button
+* [x] fix import image button
+* [] allow the import of multiple images
+* [] add a text box input
 * [] check that each button/slider works
 * [] fix footer on editor page
 * [] get reset button to work
 * [] change the width of toolbar sliders
+* [] fix the editor display values when an input is changed
 * [] (optional) get canvas to resize if desired
+* [] (optional) add a 'lock' button to sliders
+* [] (optional) alphabetize the filters in the js file *(they're messy)*
 
 
 **Startup Service Criteria**
