@@ -1033,3 +1033,14 @@ console.log(await cow());
 # Startup JavaScript continued on 3/13/24
 * redoing the editor js. I tried to frankenstein it together but it didn't work
 * began using the documentation for Fabric.js at http://fabricjs.com/docs
+
+
+# COP & CORS 3/18/24
+* __Same Origin Policy (SOP)__: only allows JavaScript to make requests to a domain if it is the same domain that the user is currently viewing
+* __Cross Origin Resource Sharing (CORS)__: allows the client (e.g. browser) to specify the origin of a request & them let the server respond with what origins are allowed.
+* __Access-Control-Allow-Origin__: a header that the server returns if the CORS doesn't block it
+
+# Service Design 3/18/24
+* make a sequence diagram that shows the interaction of objects
+**Here is the sequence diagram I made for MemeFryer**
+<img src="https://sequencediagram.org/index.html?presentationMode=readOnly#initialData=C4S2BsFMAIFlILaQGICcCelXQMqQI4CukAdgMYwAiIAhgOao0IBQzNZwA9tgKIBuWdJxKQAtD3ABnSGw7doAIgA8ZTuG4AuAMQAlSABMAfAEFwICkoD0q9akMLoNSdFPmZ7LtmU3NWgELgxIZ+nABGVj52Dk7QIaGsAA40qKBkIEkkwNCUNCQA1qKwNOiFxcxJKebpuVnear4MkKSGeKgCqBH1UY7Ore3lyanVmYoqXdrcuXSQhgDCnAgIhCRg6NAAKjTh1l32PdDzi8urG1usZgBmkGYiksDoULFh0FqhgZAaAEwakmog+sxLtcQLd7o9XBQXnp9F8fn8AUCbpA7g8YH0sC8AOKoJokL6AkBXJEox6HJYre6nUIvADyjBI03xzBInGAME47Wg-EEwjEEmkGgSkE4CUeAHcABacaASmgCEgAciy6jo0300AAOisSNAxWAJY4dexVMtgMw4qJXu8NABGFpYdoaHFEZFZLjQFXQEHu42cU3msJKLSNUhfUSidGoH4OjHGyAJYDOFUg6DO4h3ZgQsRaHEwu2Rp0EdNu6We73S33+rNBkN4z7hgvSNqxsgUBNJzh0FNp12ZswUS2521zBbkk6bUKFl13ZzuvggSBig6j46Uid9txByYMj710Rk1drCcaLaPOcLpeqI4UtbAM4Wq3EYcAKhy+VKJSK6A0ZBxNDZzg0NASBINAhCSCCdDQAYYDyHe8RvgUX4fpabxPvmMZRj2dzQO6khyjAWqIShX64RWrZ+pkzCRko4bBjioafIYxHIV+GhxAqzjwKB+ECOqPoUf6D5oR8GHNlGcTQNIJD6IBqZFq6ZHQAknA4URuRIcUH5ejqV5jpS8HUZhdG1l89ridG4lSQRzgsVppFau6EogIBglUZGJkMXWI7XuOWyWZyKkztkGkkcUjnSnph64fegb0biYYRphGh2Z+xTKapbLqimUU3pqmRbNAABkHognkBhKRxrkmlR1Z0dujJMQeeXHql2kuY4fA0CA4CnjAFxwRKMBZkp0gyNyGC8uIUiQLRloNbuPn6Ue-ltaRHVyt1vVvP1g0wAkhBvOYo1NMyrLspyE1CCI00CldU38jAZC5PlY0he+rFlFmg4GEt0XHthJaKAAMiA5UOGtZTNX5oTzfSjXMaFn3foDSkKKD4PvZpaXoMwkMlKIf0tf56Ng5A0T6PoFXuvjzDQ2uWxzVoC1mVmGik+VkgOMIWNhWsIK-pATgwCVI3PTqb2SENnGleV2VmvdN2PUzLNNSuxOThzyLczq+M6YLwvFdB7TXTA1zSNA4tSU0XoKybD0zYT9MrZOqN4TbztUswit8jNW7w7u4ae8eCCZWBCSiFwoj6P+T3CGyIwXKgCyW+rJzwV6zg4sAhCoCI+hAA">
