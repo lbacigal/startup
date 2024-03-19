@@ -149,7 +149,7 @@
 # 2/26/24 - Ideas I had to add in the future
 * I want to add a dark/light mode setting. for now it's dark mode by default
 * I want to add a 'forgot password' button to the login box
-* eventually I will add a background image as the title theme (basically look like a subreddit banner) 
+* eventually I will add a background image as the title theme (basically look like a subreddit banner)
 * add future like/comment buttons to community tab images
 * What if I did a thing where it links to their reddit account, & whenever they post something on Memefryer, it auto-posts to the Memefryer subreddit? (assuming I make a subreddit)
 * add presets to the editor in case people don't want to tinker with it
@@ -693,7 +693,7 @@ for (const el of listElements) {
 
   * to create a new element, you first create it on the DOM document
   * then you insert the new element into the DOM tree by appending it to an existing element in the tree
-        ```js
+      ```js
         function insertChild(parentSelector, text) {
         const newChild = document.createElement('div');
         newChild.textContent = text;
@@ -714,13 +714,13 @@ for (const el of listElements) {
 
         deleteElement('#courses div');
       ```
-  
+
   * DOM lets you insert entire blocks of HTML into an element
     * The following code finds the first `div` element in the DOM and replaces all the HTML it contains.
       ```js
         const el = document.querySelector('div');
-        el.innerHTML = '<div class="injected"><b>Hello</b>!</div>';   
-      ```
+        el.innerHTML = '<div class="injected"><b>Hello</b>!</div>';
+      ``'
 
   * directly injecting HTML as a block of text is a common way for attackers. They can inject JS anywhere & then the JS can make requests to steal info & do bad things. Here is an example
   ```html
@@ -891,13 +891,13 @@ for (const el of listElements) {
   * `await` wraps a call to the `async` function, blocks executing until the promise has resolves, & then returns the result of the promise.
   * We can demonstrate `await` in action with the cow promise from above. If we log the output from invoking `cow` then we see that the return value is a promise. However, if we prefix the call to the function with the await keyword, execution will stop until the promise has resolved, at which point the result of the promise is returned instead of the actual promise object.
 
-```js
-console.log(cow());
-// OUTPUT: Promise {<pending>}
+    ```js
+      console.log(cow());
+      // OUTPUT: Promise {<pending>}
 
-console.log(await cow());
-// OUTPUT: moo
-```
+      console.log(await cow());
+      // OUTPUT: moo
+    ```
 
 * By combining `async`, to define functions that return promises, with `await`, to wait on the promise, you can create code that is asynchronous, but still maintains the flow of the code without explicitly using callbacks.
 
@@ -1042,5 +1042,13 @@ console.log(await cow());
 
 # Service Design 3/18/24
 * make a sequence diagram that shows the interaction of objects
-* I made a sequence diagram for MemeFryer [here]("https://sequencediagram.org/index.html?presentationMode=readOnly#initialData=C4S2BsFMAIFlILaQGICcCelXQMqQI4CukAdgMYwAiIAhgOao0IBQzNZwA9tgKIBuWdJxKQAtD3ABnSGw7doAIgA8ZTuG4AuAMQAlSABMAfAEFwICkoD0q9akMLoNSdFPmZ7LtmU3NWgELgxIZ+nABGVj52Dk7QIaGsAA40qKBkIEkkwNCUNCQA1qKwNOiFxcxJKebpuVnear4MkKSGeKgCqBH1UY7Ore3lyanVmYoqXdrcuXSQhgDCnAgIhCRg6NAAKjTh1l32PdDzi8urG1usZgBmkGYiksDoULFh0FqhgZAaAEwakmog+sxLtcQLd7o9XBQXnp9F8fn8AUCbpA7g8YH0sC8AOKoJokL6AkBXJEox6HJYre6nUIvADyjBI03xzBInGAME47Wg-EEwjEEmkGgSkE4CUeAHcABacaASmgCEgAciy6jo0300AAOisSNAxWAJY4dexVMtgMw4qJXu8NABGFpYdoaHFEZFZLjQFXQEHu42cU3msJKLSNUhfUSidGoH4OjHGyAJYDOFUg6DO4h3ZgQsRaHEwu2Rp0EdNu6We73S33+rNBkN4z7hgvSNqxsgUBNJzh0FNp12ZswUS2521zBbkk6bUKFl13ZzuvggSBig6j46Uid9txByYMj710Rk1drCcaLaPOcLpeqI4UtbAM4Wq3EYcAKhy+VKJSK6A0ZBxNDZzg0NASBINAhCSCCdDQAYYDyHe8RvgUX4fpabxPvmMZRj2dzQO6khyjAWqIShX64RWrZ+pkzCRko4bBjioafIYxHIV+GhxAqzjwKB+ECOqPoUf6D5oR8GHNlGcTQNIJD6IBqZFq6ZHQAknA4URuRIcUH5ejqV5jpS8HUZhdG1l89ridG4lSQRzgsVppFau6EogIBglUZGJkMXWI7XuOWyWZyKkztkGkkcUjnSnph64fegb0biYYRphGh2Z+xTKapbLqimUU3pqmRbNAABkHognkBhKRxrkmlR1Z0dujJMQeeXHql2kuY4fA0CA4CnjAFxwRKMBZkp0gyNyGC8uIUiQLRloNbuPn6Ue-ltaRHVyt1vVvP1g0wAkhBvOYo1NMyrLspyE1CCI00CldU38jAZC5PlY0he+rFlFmg4GEt0XHthJaKAAMiA5UOGtZTNX5oTzfSjXMaFn3foDSkKKD4PvZpaXoMwkMlKIf0tf56Ng5A0T6PoFXuvjzDQ2uWxzVoC1mVmGik+VkgOMIWNhWsIK-pATgwCVI3PTqb2SENnGleV2VmvdN2PUzLNNSuxOThzyLczq+M6YLwvFdB7TXTA1zSNA4tSU0XoKybD0zYT9MrZOqN4TbztUswit8jNW7w7u4ae8eCCZWBCSiFwoj6P+T3CGyIwXKgCyW+rJzwV6zg4sAhCoCI+hAA")
+* I made a sequence diagram for MemeFryer
+
+<img src="sequence-diagram.png">
+
+<details>
+<summary>Click me & copy-paste the full link into your browser for an interactive version</summary>
+<p>https://sequencediagram.org/index.html?presentationMode=readOnly#initialData=C4S2BsFMAIFlILaQGICcCelXQMqQI4CukAdgMYwAiIAhgOao0IBQzNZwA9tgKIBuWdJxKQAtD3ABnSGw7doAIgA8ZTuG4AuAMQAlSABMAfAEFwICkoD0q9akMLoNSdFPmZ7LtmU3NWgELgxIZ+nABGVj52Dk7QIaGsAA40qKBkIEkkwNCUNCQA1qKwNOiFxcxJKebpuVnear4MkKSGeKgCqBH1UY7Ore3lyanVmYoqXdrcuXSQhgDCnAgIhCRg6NAAKjTh1l32PdDzi8urG1usZgBmkGYiksDoULFh0FqhgZAaAEwakmog+sxLtcQLd7o9XBQXnp9F8fn8AUCbpA7g8YH0sC8AOKoJokL6AkBXJEox6HJYre6nUIvADyjBI03xzBInGAME47Wg-EEwjEEmkGgSkE4CUeAHcABacaASmgCEgAciy6jo0300AAOisSNAxWAJY4dexVMtgMw4qJXu8NABGFpYdoaHFEZFZLjQFXQEHu42cU3msJKLSNUhfUSidGoH4OjHGyAJYDOFUg6DO4h3ZgQsRaHEwu2Rp0EdNu6We73S33+rNBkN4z7hgvSNqxsgUBNJzh0FNp12ZswUS2521zBbkk6bUKFl13ZzuvggSBig6j46Uid9txByYMj710Rk1drCcaLaPOcLpeqI4UtbAM4Wq3EYcAKhy+VKJSK6A0ZBxNDZzg0NASBINAhCSCCdDQAYYDyHe8RvgUX4fpabxPvmMZRj2dzQO6khyjAWqIShX64RWrZ+pkzCRko4bBjioafIYxHIV+GhxAqzjwKB+ECOqPoUf6D5oR8GHNlGcTQNIJD6IBqZFq6ZHQAknA4URuRIcUH5ejqV5jpS8HUZhdG1l89ridG4lSQRzgsVppFau6EogIBglUZGJkMXWI7XuOWyWZyKkztkGkkcUjnSnph64fegb0biYYRphGh2Z+xTKapbLqimUU3pqmRbNAABkHognkBhKRxrkmlR1Z0dujJMQeeXHql2kuY4fA0CA4CnjAFxwRKMBZkp0gyNyGC8uIUiQLRloNbuPn6Ue-ltaRHVyt1vVvP1g0wAkhBvOYo1NMyrLspyE1CCI00CldU38jAZC5PlY0he+rFlFmg4GEt0XHthJaKAAMiA5UOGtZTNX5oTzfSjXMaFn3foDSkKKD4PvZpaXoMwkMlKIf0tf56Ng5A0T6PoFXuvjzDQ2uWxzVoC1mVmGik+VkgOMIWNhWsIK-pATgwCVI3PTqb2SENnGleV2VmvdN2PUzLNNSuxOThzyLczq+M6YLwvFdB7TXTA1zSNA4tSU0XoKybD0zYT9MrZOqN4TbztUswit8jNW7w7u4ae8eCCZWBCSiFwoj6P+T3CGyIwXKgCyW+rJzwV6zg4sAhCoCI+hAA</p>
+</details>
+
 
