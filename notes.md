@@ -1041,7 +1041,6 @@ for (const el of listElements) {
 * __Access-Control-Allow-Origin__: a header that the server returns if the CORS doesn't block it
 
 # Service Design 3/18/24
-* make a sequence diagram that shows the interaction of objects
 * I made a sequence diagram for MemeFryer
 
 <img src="sequence-diagram.png">
@@ -1051,4 +1050,60 @@ for (const el of listElements) {
 <p>https://sequencediagram.org/index.html?presentationMode=readOnly#initialData=C4S2BsFMAIFlILaQGICcCelXQMqQI4CukAdgMYwAiIAhgOao0IBQzNZwA9tgKIBuWdJxKQAtD3ABnSGw7doAIgA8ZTuG4AuAMQAlSABMAfAEFwICkoD0q9akMLoNSdFPmZ7LtmU3NWgELgxIZ+nABGVj52Dk7QIaGsAA40qKBkIEkkwNCUNCQA1qKwNOiFxcxJKebpuVnear4MkKSGeKgCqBH1UY7Ore3lyanVmYoqXdrcuXSQhgDCnAgIhCRg6NAAKjTh1l32PdDzi8urG1usZgBmkGYiksDoULFh0FqhgZAaAEwakmog+sxLtcQLd7o9XBQXnp9F8fn8AUCbpA7g8YH0sC8AOKoJokL6AkBXJEox6HJYre6nUIvADyjBI03xzBInGAME47Wg-EEwjEEmkGgSkE4CUeAHcABacaASmgCEgAciy6jo0300AAOisSNAxWAJY4dexVMtgMw4qJXu8NABGFpYdoaHFEZFZLjQFXQEHu42cU3msJKLSNUhfUSidGoH4OjHGyAJYDOFUg6DO4h3ZgQsRaHEwu2Rp0EdNu6We73S33+rNBkN4z7hgvSNqxsgUBNJzh0FNp12ZswUS2521zBbkk6bUKFl13ZzuvggSBig6j46Uid9txByYMj710Rk1drCcaLaPOcLpeqI4UtbAM4Wq3EYcAKhy+VKJSK6A0ZBxNDZzg0NASBINAhCSCCdDQAYYDyHe8RvgUX4fpabxPvmMZRj2dzQO6khyjAWqIShX64RWrZ+pkzCRko4bBjioafIYxHIV+GhxAqzjwKB+ECOqPoUf6D5oR8GHNlGcTQNIJD6IBqZFq6ZHQAknA4URuRIcUH5ejqV5jpS8HUZhdG1l89ridG4lSQRzgsVppFau6EogIBglUZGJkMXWI7XuOWyWZyKkztkGkkcUjnSnph64fegb0biYYRphGh2Z+xTKapbLqimUU3pqmRbNAABkHognkBhKRxrkmlR1Z0dujJMQeeXHql2kuY4fA0CA4CnjAFxwRKMBZkp0gyNyGC8uIUiQLRloNbuPn6Ue-ltaRHVyt1vVvP1g0wAkhBvOYo1NMyrLspyE1CCI00CldU38jAZC5PlY0he+rFlFmg4GEt0XHthJaKAAMiA5UOGtZTNX5oTzfSjXMaFn3foDSkKKD4PvZpaXoMwkMlKIf0tf56Ng5A0T6PoFXuvjzDQ2uWxzVoC1mVmGik+VkgOMIWNhWsIK-pATgwCVI3PTqb2SENnGleV2VmvdN2PUzLNNSuxOThzyLczq+M6YLwvFdB7TXTA1zSNA4tSU0XoKybD0zYT9MrZOqN4TbztUswit8jNW7w7u4ae8eCCZWBCSiFwoj6P+T3CGyIwXKgCyW+rJzwV6zg4sAhCoCI+hAA</p>
 </details>
 
+**Leveraging HTTP**
+* the goal is to leverage HTTP verbs so you don't have to recreate functionality (eg GET, POST, PUT, DELETE, etc)
+<img src="https://raw.githubusercontent.com/webprogramming260/.github/main/profile/webServices/design/webServicesHTTPServices.jpg">
 
+**Endpoints**
+* web services usually have multiple service endpoints
+* service endpoints are often called __Application Programming Interface (API)__
+    * sometimes API refers to a collection of endpoints, sometimes a single endpoint
+* Here are some things you should consider when designing your service's endpoints.
+  * Grammatical, Readable, Discoverable, Compatible, Simple, Documented
+
+* **Grammatical** - With HTTP everything is a resource (think noun or object). You act on the resource with an HTTP verb. For example, you might have an order resource that is contained in a store resource. You then create, get, update, and delete order resources on the store resource.
+* **Readable** - The resource you are referencing with an HTTP request should be clearly readable in the URL path. For example, an order resource might contain the path to both the order and store where the order resource resides: `/store/provo/order/28502`. This makes it easier to remember how to use the endpoint because it is human readable.
+* **Discoverable** - As you expose resources that contain other resources you can provide the endpoints for the aggregated resources. This makes it so someone using your endpoints only needs to remember the top level endpoint and then they can discover everything else. For example, if you have a store endpoint that returns information about a store you can include an endpoint for working with a store in the response.
+
+  ```http
+  GET /store/provo  HTTP/2
+  ```
+
+  ```json
+  {
+    "id": "provo",
+    "address": "Cougar blvd",
+    "orders": "https://cs260.click/store/provo/orders",
+    "employees": "https://cs260.click/store/provo/employees"
+  }
+  ```
+
+* **Compatible** - When you build your endpoints you want to make it so that you can add new functionality without breaking existing clients. Usually this means that the clients of your service endpoints should ignore anything that they don't understand. Consider the two following JSON response versions.
+
+  **Version 1**
+
+  ```js
+  {
+    "name": "John Taylor"
+  }
+  ```
+
+  **Version 2**
+
+  ```js
+  {
+    "name": "John Taylor",
+    "givenName": "John",
+    "familyName": "Taylor"
+  }
+  ```
+
+  By adding a new representation of the `name` field, you provide new functionality for clients that know how to use the new fields without harming older clients that ignore the new fields and simply use the old representation. This is all done without officially versioning the endpoint.
+
+  If you are fortunate enough to be able to control all of your client code you can mark the `name` field as depreciated and in a future version remove it once all of the clients have upgraded. Usually you want to keep compatibility with at least one previous version of the endpoint so that there is enough time for all of the clients to migrate before compatibility is removed.
+
+* **Simple** - Keeping your endpoints focused on the primary resources of your application helps to avoid the temptation to add endpoints that duplicate or create parallel access to primary resources. It is very helpful to write some simple class and sequence diagrams that outline your primary resources before you begin coding. These resources should focus on the actual resources of the system you are modeling. They should not focus on the data structure or devices used to host the resources. There should only be one way to act on a resource. Endpoints should only do one thing.
+
+* **Documented** - The [Open API Specification](https://spec.openapis.org/oas/latest.html) is a good example of tooling that helps create, use, and maintain documentation of your service endpoints. It is highly suggested that you make use of such tools in order to provide client libraries for your endpoints and a sandbox for experimentation. Creating an initial draft of your endpoint documentation before you begin coding will help you mentally clarify your design and produce a better final result. Providing access to your endpoint documentation along with your production system helps with client implementations and facilitates easier maintenance of the service. The [Swagger Petstore](https://petstore.swagger.io/) example documentation is a reasonable example to follow.
+
+There are many models for exposing endpoints. We will consider three common ones, RPC, REST, and GraphQL.
