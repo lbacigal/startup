@@ -1022,6 +1022,32 @@ for (const el of listElements) {
 * [] (optional) add a 'lock' button to sliders
 * [] (optional) alphabetize the filters in the js file *(they're messy)*
 
+**Startup JavaScript Assignment**
+* [x] Review and deploy Simon JavaScript
+  * [x] Clone the Simon JavaScript repository to your development environment.
+  * [x] Open the project in VS Code and examine the application's use of JavaScript.
+  * [x] Execute in your development environment using the VS Code Live Server extension.
+  * [x] Debug using the browser's dev tools to step through the JavaScript using the Source tab.
+  * [x] Deploy to your production environment using the deployment script so that it is available with your domain's simon subdomain.
+* [] Represent each of the required technologies with JavaScript either as a complete implementation or with mocked implementation that will be replaced later.
+  * [x] Have JavaScript that takes user input and adds it to the mocked database data. This should be something simple like an array or object in your JavaScript that will eventually be replaced by service endpoint database calls.
+  * [] Have JavaScript that reads the login input and displays the user name.
+  * [] Have JavaScript that mocks your database data and injects it into the DOM.
+  * [] Use the `localstorage` API to keep data between pages and browser sessions.
+  * [] Have JavaScript that mocks out the realtime data you expect to get from the server using WebSocket and inject it into the DOM.
+* [] Make sure your name is displayed in the application and that there is a link to your GitHub repository.
+* [] Periodically commit and push your code to GitHub.
+* [] Periodically update your startup repository's notes.md file to reflect what you have learned and want to remember.
+* [] Push your final version of your project to GitHub.
+* [] Deploy your startup application to your production environment (your server).
+* [] Make sure your application is available from your production environment.
+* [] Upload the URL to your startup application to the Canvas assignment.
+
+### Technologies I plan to implement
+* [] Login - placeholder array for login information
+* [] Community post Database - placeholder array for posts the community has made & uploaded
+* [] Post Reaction - placeholders for people to upvote / downvote posts they see
+* [] Editor Tab Controls - placeholders for the editor tab so the different image values can change
 
 **Startup Service Criteria**
 * [] Create an HTTP service using Node.js and Express
@@ -1107,3 +1133,5 @@ for (const el of listElements) {
 * **Documented** - The [Open API Specification](https://spec.openapis.org/oas/latest.html) is a good example of tooling that helps create, use, and maintain documentation of your service endpoints. It is highly suggested that you make use of such tools in order to provide client libraries for your endpoints and a sandbox for experimentation. Creating an initial draft of your endpoint documentation before you begin coding will help you mentally clarify your design and produce a better final result. Providing access to your endpoint documentation along with your production system helps with client implementations and facilitates easier maintenance of the service. The [Swagger Petstore](https://petstore.swagger.io/) example documentation is a reasonable example to follow.
 
 There are many models for exposing endpoints. We will consider three common ones, RPC, REST, and GraphQL.
+
+

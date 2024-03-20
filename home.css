@@ -10,14 +10,14 @@ body {
 }
 
 .menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    border-top: black solid clear;
-    border-bottom: black solid clear;
-    box-shadow: 0 0 5px #ffbb00;
-  }
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  border-top: black solid clear;
+  border-bottom: black solid clear;
+  box-shadow: 0 0 5px #ffbb00;
+}
 
 .menu li {
   margin: 0 10px;
