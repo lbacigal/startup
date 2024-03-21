@@ -55,3 +55,27 @@ function redirectToPage() {
 }
 
 
+//* --------------- prevent click of "Sign In" until things have been entered ---------
+//  Get email & password input elements
+const emailInput = document.getElementById("exampleDropdownFormEmail1");
+const passwordInput = document.getElementById("exampleDropdownFormPassword1");
+
+// Get the sign-in button
+const signInButton = document.getElementById("sign-in");
+
+// Function to check if both email and password fields are filled
+function checkFields() {
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    // Enable the sign-in button if both fields are filled, disable it otherwise
+    if (email !== "" && password !== "") {
+        signInButton.disabled = false;
+    } else {
+        signInButton.disabled = true;
+    }
+}
+
+// Add event listeners to email and password inputs to check fields on input
+emailInput.addEventListener("input", checkFields);
+passwordInput.addEventListener("input", checkFields);
