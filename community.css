@@ -100,10 +100,10 @@ html {
     margin: 0 0 1.5em;
   }
 
-.item__details{
+.vote{
   background-color: #ffffff00;
-  /* outline-width: 0px 0p black; */
-  color: #ff0000;
+  /* outline-width: 0px 0p #ffffff00; */
+  /* color: #ff0000; */
   }
 
 .grid {

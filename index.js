@@ -79,3 +79,7 @@ function checkFields() {
 // Add event listeners to email and password inputs to check fields on input
 emailInput.addEventListener("input", checkFields);
 passwordInput.addEventListener("input", checkFields);
+
+
+
+
