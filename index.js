@@ -3,7 +3,12 @@
 //     this.disabled = true;
 //     // …
 // }
+// * = working (I think)
+// ! = not working
 
+
+
+// * ----------------- add login info to database ----------
 let database_array = [];
 
 let add_to_database=() => {
@@ -30,6 +35,7 @@ document.getElementById('sign-in').onclick = function() {
     add_to_database();
 }
 
+// * ------------- debug login info in console -----------
 let debug_localstorage = () => {
 console.log('current localStorage data ⬇️')
 // Retrieve the stored data from localStorage
@@ -42,6 +48,10 @@ let loginData = JSON.parse(storedData);
 console.log(loginData);
 }
 
-
+// ! ---------------- send user to editor tab on sign in --------------
+function redirectToPage() {
+    // Redirect to the desired page
+    window.location.href = "editor.html";
+}
 
 

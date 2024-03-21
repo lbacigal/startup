@@ -1061,6 +1061,10 @@ for (const el of listElements) {
 * began using the documentation for Fabric.js at http://fabricjs.com/docs
 
 
+# Startup JavaScript continued on 3/20/24
+* I'm unsure if I need to make another page for someone to create an account, I'll find out at some point
+
+
 # COP & CORS 3/18/24
 * __Same Origin Policy (SOP)__: only allows JavaScript to make requests to a domain if it is the same domain that the user is currently viewing
 * __Cross Origin Resource Sharing (CORS)__: allows the client (e.g. browser) to specify the origin of a request & them let the server respond with what origins are allowed.

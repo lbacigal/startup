@@ -1,3 +1,5 @@
+// * = working (I think)
+// ! = not working
 
 let community_images = []
 

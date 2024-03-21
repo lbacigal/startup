@@ -9,9 +9,13 @@
 // 20% JavaScript support for future WebSocket.
 // 40% JavaScript support for your application's interaction logic.
 
+// * = working (I think)
+// ! = not working
 
-
-
+// ! --------------- display username -----------
+// username doesn't carry over when switching from another tab when I use the local server from VSCode
+let username = localStorage.getItem("username");
+document.getElementById("username-placeholder").textContent = username;
 
 
 // * --------------- create a canvas ------------
