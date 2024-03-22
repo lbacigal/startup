@@ -12,22 +12,22 @@
 let database_array = [];
 
 let add_to_database=() => {
-    let login_info = document.getElementById("exampleDropdownFormEmail1").value;
+    let username = document.getElementById("exampleDropdownFormEmail1").value;
     let password = document.getElementById("exampleDropdownFormPassword1").value;
 
     // put login & password together in array
-    database_array.push({"username":login_info, "password":password});
+    database_array.push({"username":username, "password":password});
 
     // put login array in localStorage
     localStorage.setItem('loginData', JSON.stringify(database_array));
 
     console.log('added stuff to database');
-    console.log(database_array);
+    console.log({"username":username, "password":password});
 
     debug_localstorage();
 
     // display username on page
-    document.getElementById("username-placeholder").textContent = login_info;
+    document.getElementById("username-placeholder").textContent = username;
 };
 
 document.getElementById('sign-in').onclick = function() {

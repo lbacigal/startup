@@ -18,6 +18,10 @@ let username = localStorage.getItem("username");
 document.getElementById("username-placeholder").textContent = username;
 
 
+
+
+
+
 // * --------------- create a canvas ------------
 const canvas = new fabric.Canvas("c");
 
