@@ -1012,7 +1012,7 @@ for (const el of listElements) {
 * [x] get the sliders to display current value next to it
 * [x] fix import image button
 * [] allow the import of multiple images
-* [] add a text box input
+* [] add a text box input in the editor tab
 * [] check that each button/slider works
 * [] fix footer on editor page
 * [] get reset button to work
@@ -1031,9 +1031,10 @@ for (const el of listElements) {
   * [x] Deploy to your production environment using the deployment script so that it is available with your domain's simon subdomain.
 * [] Represent each of the required technologies with JavaScript either as a complete implementation or with mocked implementation that will be replaced later.
   * [x] Have JavaScript that takes user input and adds it to the mocked database data. This should be something simple like an array or object in your JavaScript that will eventually be replaced by service endpoint database calls.
-  * [] Have JavaScript that reads the login input and displays the user name.
-  * [] Have JavaScript that mocks your database data and injects it into the DOM.
+  * [x] Have JavaScript that reads the login input and displays the user name.
+  * [x] Have JavaScript that mocks your database data and injects it into the DOM.
   * [] Use the `localstorage` API to keep data between pages and browser sessions.
+        * [] __put a new box in the right part of the menu tab for username__
   * [] Have JavaScript that mocks out the realtime data you expect to get from the server using WebSocket and inject it into the DOM.
 * [] Make sure your name is displayed in the application and that there is a link to your GitHub repository.
 * [] Periodically commit and push your code to GitHub.
@@ -1044,7 +1045,7 @@ for (const el of listElements) {
 * [] Upload the URL to your startup application to the Canvas assignment.
 
 ### Technologies I plan to implement
-* [] Login - placeholder array for login information
+* [x] Login - placeholder array for login information
 * [] Community post Database - placeholder array for posts the community has made & uploaded
 * [] Post Reaction - placeholders for people to upvote / downvote posts they see
 * [] Editor Tab Controls - placeholders for the editor tab so the different image values can change

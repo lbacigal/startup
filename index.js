@@ -8,21 +8,20 @@
 
 
 
-// * ----------------- add login info to database ----------
-let database_array = [];
+// * ----------------- add login info to DOM & LocalStorage ----------
+let username_array= [];
 
 let add_to_database=() => {
     let username = document.getElementById("exampleDropdownFormEmail1").value;
-    let password = document.getElementById("exampleDropdownFormPassword1").value;
 
     // put login & password together in array
-    database_array.push({"username":username, "password":password});
+    username_array.push({"username":username});
 
     // put login array in localStorage
-    localStorage.setItem('loginData', JSON.stringify(database_array));
+    localStorage.setItem(`user_${username}`,username);
 
     console.log('added stuff to database');
-    console.log({"username":username, "password":password});
+    console.log({"username":username});
 
     debug_localstorage();
 
